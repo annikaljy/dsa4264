@@ -1,0 +1,15 @@
+# Data Manipulation & Storage
+pandas
+pyarrow
+fastparquet
+
+# HTML & Text Processing
+beautifulsoup4
+lxml
+
+# Machine Learning & Embeddings
+torch
+sentence-transformers
+
+# Utilities
+tqdm
