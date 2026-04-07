@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+
+  backend:
+    build: ./backend
+    container_name: moe_backend
+    ports:
+      - "8000:8000"
+    volumes:
+      # Mount your data files here — see README for what goes in this folder
+      - ./data:/app/data:ro
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+    # Backend is memory-hungry (models + embeddings); reserve at least 6 GB
+    deploy:
+      resources:
+        limits:
+          memory: 8g
+
+  frontend:
+    build: ./frontend
+    container_name: moe_frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
+
