@@ -1,0 +1,53 @@
+module_code,module_title,module_type,relevance_score,breadth_score,max_similarity,num_matching_jobs
+CS1010A,This course introduces the fundamental concepts of,core,0.18049715858056525,899,0.5926815459660271,899
+BT1101,This course provides students with an introduction,core,0.17526250801540355,828,0.544239894235462,828
+IS1108,Course is designed to introduce students to the is,core,0.11134044023766071,290,0.45599369010313795,290
+MA1521,This course provides a basic foundation for calcul,core,0.09459809030266626,66,0.37205800578701703,66
+MA1522,This course is targeted at students from School of,core,0.11427449619285102,230,0.383231257981906,230
+BT2101,This course provides the foundations to econometri,core,0.1460755002870266,539,0.3997960472126209,539
+BT2102,This course aims to provide students with practica,core,0.18560615592788998,1000,0.5188053808174797,1000
+CS2030,This course is a follow up to CS1010. It explores ,core,0.13136449015827936,371,0.4120682587967361,371
+CS2040,This course introduces students to the design and ,core,0.15052176246717325,541,0.4625860468683858,541
+IS2101,IS2101 (Business and Technical Communication) a cu,core,0.25568417693019085,1564,0.509781430936392,1564
+ST2334,This course introduces students to basic probabili,core,0.12125378810884975,223,0.3491226422854775,223
+BT3103,The course covers the concepts of software develop,core,0.23813753023846154,1329,0.5761646732246533,1329
+IS3103,Today's technology leaders must identify key drive,core,0.22111710212777988,1148,0.6157877475945174,1148
+BT4103,This project can be viewed as a large-scale practi,core,0.1807083586751641,895,0.6075134321867063,895
+BT4101,The objective of this course is to enable students,core,0.19711707003842538,1021,0.5999768013389477,1021
+IE3120,This course introduces the basic concepts and tech,elective,0.2682174579715102,1475,0.629890437708972,1475
+IS3150,This course prepares students with a foundational ,elective,0.20747692638902837,966,0.6306987162536828,966
+IS3240,Digital business platforms are a successful founda,elective,0.15504275162037515,646,0.5325154809605972,646
+BT4013,"This course broadly covers quantitative trading, f",elective,0.14504520533554524,515,0.6360939403390401,515
+BT4016,This course exposes students to the fundamentals o,elective,0.14436922922567208,546,0.46923092411593115,546
+BT4211,"In today’s environment, marketing or business anal",elective,0.22327310296752165,1153,0.610109028158573,1153
+BT4212,This course teaches the theory and techniques to a,elective,0.1292759596752839,358,0.4688309180254819,358
+DBA4811,Decisions supported by timely data analyses are th,elective,0.17813395426441664,847,0.6305033764562425,847
+IS4241,"Social media (e.g., Facebook, LinkedIn, WhatsApp, ",elective,0.09970125921780687,228,0.419324246062716,228
+IS4242,This course provides a broad coverage of intellige,elective,0.19560720123449768,1043,0.5174034777729872,1043
+IS4250,"This course is to provide students with hands-on, ",elective,0.23620592573116764,1335,0.6393889991138955,1335
+IS4262,This course is designed for students who wants to ,elective,0.20490534821120934,1075,0.5139120218185081,1075
+BT3017,This course covers topics that are important for p,elective,0.1238018898187888,251,0.44936718731660785,251
+BT3102,"Computers are becoming readily accessible, and its",elective,0.14464228225704767,584,0.46964244380290726,584
+BT3104,Business analytics revolves around searching for v,elective,0.1615441245983507,710,0.432768525985656,710
+CS3243,The course introduces the basic concepts in search,elective,0.1903786143230017,1091,0.49865399480906103,1091
+CS3244,This course introduces basic concepts and algorith,elective,0.1431093156949068,423,0.4523615945062535,423
+CS4248,This course deals with computer processing of huma,elective,0.16797398085699577,796,0.3882136349151445,796
+BT4012,The course comprehensively explores advanced analy,elective,0.12561340396502485,377,0.49663070142978283,377
+BT4015,This course provides comprehensive coverage of geo,elective,0.12342555015184785,284,0.38931016398218654,284
+BT4221,This course introduces students to key concepts in,elective,0.13782641574129115,382,0.653864895949062,382
+BT4222,The World Wide Web inundates us with vast amounts ,elective,0.14325078816004497,525,0.42703705536165376,525
+BT4240,This course provides a comprehensive coverage of m,elective,0.13277144374489266,332,0.4383199552869397,332
+BT4241,This course offers a toolkit for causal impact ana,elective,0.11207044896214367,329,0.4928993826922402,329
+ST4245,The course aims to equip students with a repertoir,elective,0.10917214560351697,187,0.5138885438964722,187
+IS3107,This course covers the main concepts of data engin,elective,0.1655969253364593,735,0.5631136214406551,735
+IS3221,"Business resources include employees, business pro",elective,0.2660477876430128,1519,0.631131545356764,1519
+BT4014,To design technology that impacts people – in educ,elective,0.13419658424846542,463,0.5582553828142541,463
+BT4301,This course introduces students to essential conce,elective,0.2005220726004499,1083,0.5940492347209843,1083
+IS4226,The course aims to provide students with the funda,elective,0.15593588663515265,602,0.5603125750589264,602
+IS4228,FinTech is revolutionizing the financial sector wi,elective,0.11648325833160383,381,0.5667761392084708,381
+IS4234,Organizations today need to be aware of and ensure,elective,0.1868097114412004,978,0.5016578362841108,978
+IS4246,This course is designed for students who want to d,elective,0.2053746149427657,1115,0.6145433228260445,1115
+IS4302,What are the definitions of blockchain and distrib,elective,0.1410738316172857,434,0.44711152160255835,434
+IS4303,With the rapid development of Information Technolo,elective,0.08769188324247501,308,0.5477738693738764,308
+IS4010,This course enables students to apply the computin,elective,0.3200473267334953,1753,0.6710126837849013,1753
+CP2880,,elective,0.0679234470202658,85,0.29305139266215535,85

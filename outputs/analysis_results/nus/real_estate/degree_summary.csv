@@ -1,0 +1,2 @@
+school,degree,degree_full_name,category,total_modules,market_size,market_cutoff_score,union_relevance,collective_relevance,well_prepared_jobs,well_prepared_pct,moderately_prepared_jobs,moderately_prepared_pct,underprepared_jobs,underprepared_pct,top_module,top_module_relevance
+nus,real_estate,National University of Singapore - Real Estate,business,21,1210,0.19168764419751466,0.33677266512443593,0.25844136365132353,225,18.59504132231405,553,45.70247933884298,432,35.70247933884298,FIN2704,0.2525173709040842

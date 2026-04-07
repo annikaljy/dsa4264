@@ -1,1 +1,6 @@
 data
+.DS_Store
+.venv/
+__pycache__/
+*.parquet
+outputs/bertopic_global_model/

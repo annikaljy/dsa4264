@@ -1,0 +1,24 @@
+module_code,module_title,module_type,relevance_score,breadth_score,max_similarity,num_matching_jobs
+40-002,The course covers a broad range of optimisation al,core,0.12949037622455667,179,0.36093693212593697,179
+40-011,This course provides an introduction to the Engine,core,0.25155248377083045,937,0.5511633499631737,937
+40-012,This course introduces concepts and techniques rel,core,0.23356521333779132,923,0.5901929017078796,923
+40-015,This course will introduce students to various asp,core,0.20491998283781776,815,0.4521948679097754,815
+40-016,The increasing availability of data is changing th,core,0.1758895866865382,547,0.5806170581840601,547
+40-017,This course builds upon the material taught in Mod,core,0.13300758718993377,330,0.3905822076406331,330
+40-018,Iterative methods are mathematical procedures that,core,0.04599103572183536,25,0.26316363553967476,25
+01-102,"Broadly, this course aims to acquaint students wit",elective,0.14996330529242716,341,0.5233064874720478,341
+01-107,This course provides students with an understandin,elective,0.12876770939431031,310,0.5040700687679074,310
+40-230,Design for Sustainability is the integration of so,elective,0.1673761024472327,502,0.5425179822995422,502
+40-240,This course will focus on the financial theory of ,elective,0.11500396904858241,133,0.467466757729405,133
+40-242,Introduction to the theory and practice of mathema,elective,0.15182898703086264,335,0.5587824326257651,335
+40-250,Practising engineers today play a vital role in en,elective,0.2759368981874813,1075,0.590399938555248,1075
+40-260,Introduces concepts of supply chain design and ope,elective,0.2619878050207426,1067,0.6477303009707177,1067
+40-302,"This course introduces you to convex optimisation,",elective,0.10778713116689491,102,0.3370177929657865,102
+40-305,This is a follow-up to the introduction course on ,elective,0.10847385763689596,52,0.32639939964668746,52
+40-316,This is an introductory course in basic game theor,elective,0.08365096728113977,13,0.3303705832644507,13
+40-318,Successful orchestration of planning and execution,elective,0.22773290959596526,873,0.5987996492996064,873
+40-319,An agent is intelligent if it perceives its enviro,elective,0.19145130170423344,702,0.5511072792317564,702
+40-320,An airport is one of the most complex engineering ,elective,0.2109524855116955,799,0.516076710525357,799
+40-321,Airports are complex systems that require the use ,elective,0.19855524911500572,740,0.4561872128588998,740
+40-323,This course introduces two key tools used by profe,elective,0.19902751307834327,734,0.5149551134934307,734
+40-324,This course introduces topics relevant for student,elective,0.19706422623140915,730,0.4971622618708026,730

@@ -1,0 +1,52 @@
+module_code,module_title,module_type,relevance_score,breadth_score,max_similarity,num_matching_jobs
+DSA1101,The abundance of data being harvested from various,core,0.175642202544602,1056,0.5565884935263647,1056
+CS1010S,This course introduces the fundamental concepts of,core,0.17567048095700483,1056,0.5618216159099731,1056
+CS2040,This course introduces students to the design and ,core,0.15032293368294414,855,0.4625860468683858,855
+DSA2101,Data visualisation is an essential tool for data a,core,0.1529171161272048,904,0.5515950635888497,904
+DSA2102,This course aims at introducing basic concepts and,core,0.08099922314396926,265,0.337185683670299,265
+MA2001,This course is a first course in linear algebra. F,core,0.09372519749808512,294,0.2858295356695232,294
+MA2002,This is a course in single-variable calculus. We w,core,0.07542878358340745,118,0.28505724227878754,118
+MA2104,This is a course on the calculus of functions of s,core,0.04809693251639052,42,0.25660150621391054,42
+MA2311,This course applies advanced calculus to practical,core,0.07579773784041159,131,0.32810364294813515,131
+ST2131,This course gives an elementary introduction to pr,core,0.10555146112233488,376,0.31998337535592347,376
+MA2116,This course gives an elementary introduction to pr,core,0.10555146112233488,376,0.31998337535592347,376
+ST2132,This course introduces students to the theoretical,core,0.11698247461886654,516,0.3223190485573563,516
+CS3244,This course introduces basic concepts and algorith,core,0.1435139936143766,783,0.4523616391458404,783
+DSA3101,This course is designed to be a continuation of DS,core,0.1887515051716116,1097,0.5303664808154739,1097
+DSA3102,Convex optimisation is an indispensable technique ,core,0.037826128666659666,14,0.2429375270934751,14
+ST3131,This course focuses on data analysis using multipl,core,0.15279673684024514,918,0.3830374687609521,918
+DSA4211,Dimensionality is an issue that can arise in many ,core,0.04364161298326884,44,0.27830161376840024,44
+DSE4211,"This course introduces digital currencies, one of ",core,0.03528897709981527,128,0.3681677288923328,128
+QF4211,"This course introduces digital currencies, one of ",core,0.03528897709981527,128,0.3681677288923328,128
+DSE4212,This course introduces several state-of-the-art da,core,0.1088222205999405,392,0.5219580223813041,392
+QF4212,This course introduces several state-of-the-art da,core,0.1088222205999405,392,0.5219580223813041,392
+DSA4213,This course provides a comprehensive exploration o,core,0.13850974538516048,743,0.3889994856256792,743
+DSA4262,The practice of data science involves sense-making,core,0.18885084095110727,1096,0.6036302363395523,1096
+DSA4263,The practice of data science involves sense-making,core,0.21053812721606194,1192,0.5921798524550699,1192
+DSA4264,The practice of data science involves sense-making,core,0.17406212521192888,1013,0.5910716139010975,1013
+DSA4265,The practice of data science involves sense-making,core,0.17618877508577455,991,0.5288749564127156,991
+DSA4266,The practice of data science involves sense-making,core,0.18212839750960735,1055,0.5902155063948658,1055
+DSA4288,This course allows students to develop skills for ,core,0.1893090760272465,1099,0.580406749721729,1099
+DSA4288M,This course allows students to develop skills for ,core,0.1893090760272465,1099,0.580406749721729,1099
+DSA4288S,This course allows students to develop skills for ,core,0.1893090760272465,1099,0.580406749721729,1099
+DSA3288,DSA3288 is part of the Undergraduate Research Oppo,core,0.19040770174708524,1120,0.5610720849953708,1120
+DSA3288R,Please see section 4.4.3. This is a UROPS course e,core,0.2198580567258253,1288,0.5210575426461109,1288
+MA3252,The objective of this course is to work on optimis,elective,0.13824201082240492,746,0.3247925133908271,746
+MA3227,This course is a continuation of MA2213 Numerical ,elective,0.034180576426215054,22,0.2629703464623433,22
+MA3238,This course introduces the concept of modelling de,elective,0.02032617237524641,9,0.21897083221187108,9
+ST3236,This course introduces the concept of modelling de,elective,0.02032617237524641,9,0.21897083221187108,9
+MA4230,This course provides essential ideas and technique,elective,0.030129585197978648,24,0.2353324312924437,24
+MA4251,This course builds on ST3236 and introduces an arr,elective,0.11018100591967865,442,0.32788057687698113,442
+ST4238,This course builds on ST3236 and introduces an arr,elective,0.11018100591967865,442,0.32788057687698113,442
+MA4260,This is a stochastic operations research course an,elective,0.19584964559148793,1128,0.5770902797398558,1128
+MA4268,This multi-disciplinary course focuses on various ,elective,0.05559730750305055,55,0.38958534060492683,55
+MA4270,This course aims at presenting important mathemati,elective,0.037928205923210445,32,0.3366700106883922,32
+ST3232,This course covers common designs of experiments a,elective,0.058359667438271666,144,0.30925260838343427,144
+ST3239,This course gives an introduction to the design of,elective,0.15545262381311725,898,0.4321932399113487,898
+ST3247,The advent of fast and inexpensive computational p,elective,0.0952346997419347,313,0.3607955960276784,313
+ST3248,Statistical learning is a large collection of comp,elective,0.11062849764346841,431,0.36113046881578575,431
+ST4231,The availability of high-speed computation has led,elective,0.0734742799205577,123,0.3080016421870191,123
+ST4234,"Bayesian principles: Bayes' theorem, estimation, h",elective,0.11995680555969937,532,0.3285928731781014,532
+ST4248,Statistical Learning is a large collection of comp,elective,0.08885688035131246,268,0.32989631049274615,268
+ST4250,This course focuses on the classical theory and me,elective,0.1062659621379002,386,0.27990510312498895,386
+ST4253,This course introduces the modelling and analysis ,elective,0.1533694592175436,937,0.40394576602843546,937

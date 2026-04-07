@@ -1,0 +1,6 @@
+school,degree,degree_full_name,category,total_modules,total_jobs_scanned,market_size,market_cutoff_score,union_relevance,collective_relevance,active_core_utilization_pct,supporting_skill_breadth_pct,top_module,top_module_relevance,avg_module_relevance
+nus,civil_engineering,National University of Singapore - Civil Engineering,engineering,61,22151,2436,0.25115652913987385,0.3470842208614454,0.30293564347519264,0,0,EG3611A,0.27884440972385377,0.15502282270816006
+nus,chemical_engineering,National University of Singapore - Chemical Engineering,engineering,65,22151,1021,0.19790578689706603,0.3416656772567192,0.27974343041958727,0,0,CN5191,0.2793634067738347,0.11512476946174816
+nus,biomedical_engineering,National University of Singapore - Biomedical Engineering,engineering,42,22151,1194,0.170447561793928,0.3300908549787794,0.2754725245244498,0,0,EG3612,0.2997582707650135,0.10940754054774733
+sutd,engineering_product,Singapore University of Technology and Design - Engineering Product Development,engineering,28,22151,1150,0.250561506709717,0.32728379642371497,0.26173657700281827,0,0,01-106,0.2996991073784892,0.1388419202364412
+sutd,engineering_systems,Singapore University of Technology and Design - Engineering Systems and Design,engineering,23,22151,717,0.2619957854086333,0.32368190615000836,0.2772065754801494,0,0,40-250,0.2733030612820701,0.1704272623147129

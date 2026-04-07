@@ -1,0 +1,51 @@
+module_code,module_title,module_type,relevance_score,breadth_score,max_similarity,num_matching_jobs
+CS1010J,This course introduces the fundamental concepts of,core,0.1725257071003397,632,0.5421626760466527,632
+BT1101,This course provides students with an introduction,core,0.17500824294560077,730,0.544239894235462,730
+IS1108,Course is designed to introduce students to the is,core,0.11136812961305972,240,0.45599369010313795,240
+BT2102,This course aims to provide students with practica,core,0.1852421111301441,833,0.5188054146927737,833
+CS2030,This course is a follow up to CS1010. It explores ,core,0.13087156563131427,258,0.4120682587967361,258
+CS2040,This course introduces students to the design and ,core,0.14995860354285973,376,0.4625860468683858,376
+IS2101,IS2101 (Business and Technical Communication) a cu,core,0.2551096770634802,1580,0.509781430936392,1580
+IS2102,This course aims to train students to be proficien,core,0.2604134974322173,1455,0.6453243221337659,1455
+IS2103,This course aims to train students to be conversan,core,0.2217470945420813,1161,0.5636990061472281,1161
+IS3103,Today's technology leaders must identify key drive,core,0.22061903895969365,1100,0.6157877475945174,1100
+IS3106,This module aims to train students to be conversan,core,0.2346679058230943,1355,0.6086498931329906,1355
+CP4101,,core,0.06760854363437606,57,0.29305139266215535,57
+IS4103,Students are required to work (in groups) through ,core,0.2547798132529765,1450,0.5856244797943854,1450
+MA1521,This course provides a basic foundation for calcul,core,0.09477208986048215,27,0.37205800578701703,27
+ST2334,This course introduces students to basic probabili,core,0.12137095712097694,107,0.3491226422854775,107
+IS3150,This course prepares students with a foundational ,core,0.20683392187446673,877,0.6306987162536828,877
+IS3240,Digital business platforms are a successful founda,core,0.1540238854398828,548,0.5325154809605972,548
+IS4151,AIoT (Artificial Intelligence of Things) is the in,core,0.1282755399601776,303,0.5631287373993165,303
+IS4262,This course is designed for students who wants to ,core,0.20400362404326533,999,0.5139120218185081,999
+IS4226,The course aims to provide students with the funda,core,0.15601531205910438,437,0.5603125750589264,437
+IS4228,FinTech is revolutionizing the financial sector wi,core,0.11651280610099712,320,0.5667761392084708,320
+IS4302,What are the definitions of blockchain and distrib,core,0.1411600873232138,321,0.44711152160255835,321
+IS4303,With the rapid development of Information Technolo,core,0.08725020787541451,262,0.5477738693738764,262
+CS2105,This course aims to provide a broad introduction t,core,0.16570765930262982,522,0.6075828263715775,522
+BT3017,This course covers topics that are important for p,core,0.12386522040524058,152,0.44936718731660785,152
+CS3240,This course is intended for students in computing ,core,0.18042343907053796,721,0.46792080208111564,721
+CS3243,The course introduces the basic concepts in search,core,0.19036848437296672,903,0.52156797012615,903
+IS3107,This course covers the main concepts of data engin,core,0.16483767565938204,581,0.5631136214406551,581
+IS3221,"Business resources include employees, business pro",core,0.2654111757572735,1574,0.631131545356764,1574
+BT4014,To design technology that impacts people – in educ,core,0.13373636291739607,353,0.5582553828142541,353
+IS4100,This course focuses on the management of IS projec,core,0.25583936101233085,1386,0.6248326440068004,1386
+IS4234,Organizations today need to be aware of and ensure,core,0.18622532545435952,825,0.5016578362841108,825
+IS4236,This course aims to equip students with the knowle,core,0.22379712761753776,1116,0.6993745437847226,1116
+IS4243,The aims and objectives are: (1) to provide an ove,core,0.30128871374501764,1768,0.6037227789470514,1768
+IS4246,This course is designed for students who want to d,core,0.20543367128836423,989,0.6756871936053722,989
+IS4248,The Metaverse consists of many different building ,core,0.14660386763750272,440,0.5183957889483469,440
+IS4250,"This course is to provide students with hands-on, ",core,0.23630772169429515,1288,0.6393889991138955,1288
+IS4301,Acceleration of the pace of digital transformation,core,0.1826576034882537,752,0.6042218111813307,752
+IS3251,The course introduces students to the concepts and,core,0.22875787323283087,1366,0.520965939031972,1366
+IS4152,This course provides a broad introduction to the f,core,0.09716021559073784,151,0.3747260528774605,151
+IS4241,"Social media (e.g., Facebook, LinkedIn, WhatsApp, ",core,0.09935711943409443,151,0.419324246062716,151
+IS4242,This course provides a broad coverage of intellige,core,0.19553626423994858,957,0.5307681445368766,957
+IS4261,Information technology has fundamentally transform,core,0.20044319241681807,946,0.6385832261385614,946
+CS2107,This course serves as an introductory course on in,core,0.09338165036272093,174,0.49611803592568915,174
+IFS4101,This course examines the laws relating to informat,core,0.16040270060028958,573,0.6049627111915792,573
+IS4231,The main focus of this course is on the managerial,core,0.24605890969332295,1428,0.6814367184503678,1428
+IS4233,This course examines key legal issues for professi,core,0.20062119727448066,958,0.5211019220516566,958
+IS4238,Information Technology (IT) involves using compute,core,0.16586915751588827,603,0.6497529762918385,603
+IS4010,This course enables students to apply the computin,core,0.3193878612364852,1917,0.6710126837849013,1917
+CP3880,This course enables students to apply the computin,core,0.28058828415050746,1658,0.6188953708145677,1658

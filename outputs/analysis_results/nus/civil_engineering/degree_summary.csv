@@ -1,0 +1,2 @@
+school,degree,degree_full_name,category,total_modules,market_size,market_cutoff_score,union_relevance,collective_relevance,well_prepared_jobs,well_prepared_pct,moderately_prepared_jobs,moderately_prepared_pct,underprepared_jobs,underprepared_pct,top_module,top_module_relevance
+nus,civil_engineering,National University of Singapore - Civil Engineering,engineering,61,2744,0.22186390460752883,0.345294523184845,0.3018559249708321,1013,36.916909620991255,1024,37.31778425655977,707,25.765306122448976,EG3611A,0.2758401965342284

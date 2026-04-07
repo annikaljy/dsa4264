@@ -1,0 +1,32 @@
+module_code,module_title,module_type,relevance_score,breadth_score,max_similarity,num_matching_jobs
+50-001,This course is an introduction to the design and p,core,0.21020374483531556,1767,0.4666642509293964,1767
+50-002,This course introduces architecture of digital sys,core,0.11583563644243472,590,0.4012697462145626,590
+50-003,This course is an introduction to the fundamental ,core,0.14606984342129192,869,0.4896037989218745,869
+50-004,This course is an introduction to algorithms and a,core,0.15403061295467996,1007,0.5202593558581685,1007
+50-005,Topics on the engineering of computing and network,core,0.12492461085462188,620,0.5004743701862554,620
+50-006,The course will introduce the field of Human-Compu,elective,0.18964864814986024,1544,0.5605382258010374,1544
+50-007,Machine learning is the study of algorithms that i,elective,0.1558637642809878,1059,0.5067891663022777,1059
+50-012,This course will introduce the principles and prac,elective,0.1603591573835594,1068,0.6116289754373572,1068
+50-017,"Introduction to computer graphics algorithms, soft",elective,0.15385838714553055,1049,0.45736943230783655,1049
+50-020,This course covers theory and practice of network ,elective,0.15196676209350804,921,0.6104021814705323,921
+50-021,Artificial intelligence (AI) is a rich field spann,elective,0.19900020289986142,1568,0.5462176681368419,1568
+50-033,This is an introductory course about the basic of ,elective,0.15449844229813156,1059,0.42356846644685564,1059
+50-035,This is an advanced undergraduate level course on ,elective,0.12277827068058329,525,0.5571137252306066,525
+50-037,This course will not be offered in Fall 2025. Dece,elective,0.15905694853305916,1096,0.4255098615022676,1096
+50-038,This course provides students the necessary backgr,elective,0.22099369279515776,1792,0.6077596369220428,1792
+50-039,The primary aim of this course is to equip student,elective,0.12457758774142202,492,0.42036518421526464,492
+50-040,Natural Language Processing (NLP) is an important ,elective,0.1320625557590539,675,0.3720264397916711,675
+50-041,This course introduces fundamental concepts for de,elective,0.09690522424937532,309,0.48332232591901175,309
+50-042,This course provides students with a basic appreci,elective,0.13595880859987028,766,0.5584060113178932,766
+50-043,Database systems manage data which is at the heart,elective,0.12861404621954695,556,0.5865842926351649,556
+50-044,"This course covers the security of users, individu",elective,0.07223914008082584,258,0.4542566324933166,258
+50-045,This course will not be offered in Fall 2025. Auto,elective,0.09976421976722755,263,0.34399987394842135,263
+50-046,The Internet of Things and its integration with cl,elective,0.1270022968132509,678,0.5573020989394364,678
+50-047,The mobile robotics course is an introductory cour,elective,0.13593822429272626,713,0.4850779151827779,713
+50-050,Previously known as “50.050 Discrete Mathematics a,elective,0.08431232290343027,178,0.415267853018948,178
+50-051,Previously known as “50.new Secure Software Engine,elective,0.13008527091091618,751,0.4552196820310529,751
+50-052,Extended Reality (XR) encapsulates various immersi,elective,0.10026480831842402,385,0.505540477350522,385
+50-053,The course will introduce the fundamental concepts,elective,0.15073257032440726,927,0.5482504814016036,927
+50-054,This course aims to introduce a new programming pa,elective,0.07704270176526093,187,0.35496114485274854,187
+50-055,"In this course, students will learn the concepts a",elective,0.18446005721127562,1417,0.6195696607948084,1417
+50-056,This course introduces students to functional prog,elective,0.10950601478077171,443,0.38847852140138467,443

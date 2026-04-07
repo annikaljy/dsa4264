@@ -1,0 +1,2 @@
+school,degree,degree_full_name,category,total_modules,market_size,market_cutoff_score,union_relevance,collective_relevance,well_prepared_jobs,well_prepared_pct,moderately_prepared_jobs,moderately_prepared_pct,underprepared_jobs,underprepared_pct,top_module,top_module_relevance
+nus,information_systems,National University of Singapore - Information Systems,information_systems,50,1984,0.2589845434554466,0.372830771931632,0.3224721087906351,1016,51.20967741935484,697,35.131048387096776,271,13.659274193548388,IS4010,0.3193878612364852

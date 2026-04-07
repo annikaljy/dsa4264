@@ -1,0 +1,6 @@
+school,degree,degree_full_name,category,total_modules,total_jobs_scanned,market_size,market_cutoff_score,union_relevance,collective_relevance,active_core_utilization_pct,supporting_skill_breadth_pct,top_module,top_module_relevance,avg_module_relevance
+smu,business,Singapore Management University - Business,business,29,22151,488,0.3414809723989492,0.3853429686923414,0.33373904018828965,0,0,2661,0.31268759390138406,0.21709490859797026
+smu,accountancy,Singapore Management University - Accountancy,business,68,22151,412,0.38068129694311253,0.3713277630284327,0.33524658935558677,0,0,26371,0.30894077357517213,0.2067737387613462
+nus,accountancy,National University of Singapore - Accountancy,business,31,22151,442,0.3592796640226683,0.35198635967892494,0.29604537456719465,0,0,ACC4701,0.29982573200212126,0.18956450207027936
+nus,real_estate,National University of Singapore - Real Estate,business,21,22151,748,0.2065049912779732,0.3381577390312309,0.25964447394856827,0,0,FIN2704,0.25179900614458156,0.13619771134479283
+smu,economics,Singapore Management University - Economics,business,71,22151,906,0.20137268350063897,0.32036849433421744,0.2700813355713145,0,0,23031,0.25650454757105484,0.12396558178192292

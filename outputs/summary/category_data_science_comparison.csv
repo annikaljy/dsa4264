@@ -1,0 +1,4 @@
+school,degree,degree_full_name,category,total_modules,total_jobs_scanned,market_size,market_cutoff_score,union_relevance,collective_relevance,active_core_utilization_pct,supporting_skill_breadth_pct,top_module,top_module_relevance,avg_module_relevance
+sutd,design_ai,Singapore University of Technology and Design - Design and AI,data_science,16,22151,523,0.25879735546083393,0.3172795859828472,0.2549402630576353,0,0,02-211,0.27352335548971696,0.1609470449640759
+nus,data_sci_analytics,National University of Singapore - Data Science and Analytics,data_science,51,22151,1321,0.17515934078885376,0.27528485499990585,0.2359585843275098,0,0,DSA3288R,0.22180498748013086,0.11688353557608676
+sutd,computer_sci,Singapore University of Technology and Design - Computer Science and Design,data_science,31,22151,555,0.26087635387547037,0.2590906418812441,0.22445877113130075,0,0,50-038,0.22310259976186791,0.1412493898326381

@@ -1,0 +1,2 @@
+school,degree,degree_full_name,category,total_modules,market_size,market_cutoff_score,union_relevance,collective_relevance,well_prepared_jobs,well_prepared_pct,moderately_prepared_jobs,moderately_prepared_pct,underprepared_jobs,underprepared_pct,top_module,top_module_relevance
+nus,biomedical_engineering,National University of Singapore - Biomedical Engineering,engineering,42,1586,0.15616434378533342,0.32822696245179156,0.274018678152696,377,23.770491803278688,766,48.29760403530896,443,27.93190416141236,EG3612,0.29814731993142773

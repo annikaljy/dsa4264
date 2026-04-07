@@ -1,0 +1,2 @@
+school,degree,degree_full_name,category,total_modules,market_size,market_cutoff_score,union_relevance,collective_relevance,well_prepared_jobs,well_prepared_pct,moderately_prepared_jobs,moderately_prepared_pct,underprepared_jobs,underprepared_pct,top_module,top_module_relevance
+nus,accountancy,National University of Singapore - Accountancy,business,31,2164,0.26078473378280315,0.3481879646625332,0.2942710885921627,707,32.670979667282815,966,44.63955637707948,491,22.68946395563771,ACC4701,0.2963526533797489

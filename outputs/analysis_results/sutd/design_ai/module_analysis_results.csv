@@ -1,0 +1,17 @@
+module_code,module_title,module_type,relevance_score,breadth_score,max_similarity,num_matching_jobs
+60-001,Deep neural networks have revolutionized the lands,core,0.1244274032275416,233,0.48929811105853094,233
+60-002,Massive amounts of data are collected by many comp,core,0.20465291315955267,975,0.5034728660348491,975
+60-003,"In Product Design Studio, students will form teams",core,0.18566149056025175,881,0.46075801075584716,881
+60-004,"In Service Design Studio, students will form a tea",core,0.24963674562373483,1421,0.5078436750321056,1421
+60-005,Artificial intelligence is used in many applicatio,core,0.17047631935075852,733,0.46507422107398666,733
+60-006,"In Spatial Design Studio, students will work acros",core,0.11662409691709054,345,0.633505170243818,345
+60-008,"Large systems such as manufacturing plants, hospit",core,0.16123633828535308,669,0.4031492503666167,669
+,"This course examines the social, economic, and cul",elective,0.16740423110228791,692,0.4938535540841599,692
+02-143,The advances in the development of the so-called A,elective,0.08548556399553058,107,0.40294558334874436,107
+02-146,This course provides students in technology and de,elective,0.13409517933160203,514,0.4659300786571681,514
+02-176,Collective systems function as more than the sum o,elective,0.07358662677527693,101,0.37613518005860386,101
+02-202,Work organizations are complex social systems that,elective,0.2477158047298154,1424,0.5470989137716509,1424
+02-204,Focuses on the memoir as a window onto the relatio,elective,0.08485658143968301,139,0.5113563606593506,139
+02-208,10.018 Modelling Space and Systems 12 credits Su M,elective,0.15363765465896626,615,0.433588689945016,615
+02-211,This course was formerly titled ‘Critical manageme,elective,0.2735693764512472,1547,0.5326012068684387,1547
+02-218,This course is an introduction to the study of psy,elective,0.10738110105294195,202,0.411552215044958,202

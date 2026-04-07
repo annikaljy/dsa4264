@@ -1,0 +1,66 @@
+module_code,module_title,module_type,relevance_score,breadth_score,max_similarity,num_matching_jobs
+CN1101A,This course provides an experiential exposure to c,core,0.13888632798175948,928,0.48967132059873597,928
+CE2407A,Many engineering problems involve natural processe,core,0.11205208465358171,648,0.4047731587598277,648
+MA1513,This is a seven-week course specially designed for,core,0.12437873093771039,738,0.3779054731229048,738
+CN2102,This course is the second part of a two-part cours,core,0.10929823310398641,566,0.5350668098620807,566
+CN2103,This course provides students with basic concepts ,core,0.0656400646220587,257,0.38033322319311347,257
+CS1010E,This course introduces the fundamental concepts of,core,0.17296150465931806,1319,0.5421626488745785,1319
+MA1511,This is a seven-week course specially designed for,core,0.12539489125583947,786,0.39370089094437155,786
+MA1512,This is a seven-week course specially designed for,core,0.09134725245418862,442,0.37300385147209164,442
+CN2104,This course provides students with an understandin,core,0.06633805399048678,281,0.3741027502726697,281
+CN2109,,core,0.06766596502336875,264,0.29305139266215535,264
+CDE2501,The course introduces students to how cities are g,core,0.1954252674715191,1409,0.4617289729390841,1409
+EE2211,This course introduces students to various machine,core,0.15597801438418907,1205,0.49582645846958273,1205
+CN2105,The course begins with a revision of chemical kine,core,0.04887871973531067,156,0.39179936164679685,156
+CN2110,,core,0.06766596502336875,264,0.29305139266215535,264
+CN2111,,core,0.06766596502336875,264,0.29305139266215535,264
+ES2631,This course equips students with competencies that,core,0.1618036759274135,1044,0.5245847396315928,1044
+CN3104,This course teaches students how to use MATLAB and,core,0.07970307425403712,327,0.43291439255454844,327
+CN3105,,core,0.0676659379658019,264,0.29305141522554523,264
+CN3106,,core,0.06766596502336875,264,0.29305139266215535,264
+EG2401A,This course aims to alert and sensitise students o,core,0.24566537894529208,1704,0.49775149550915754,1704
+EG3611A,This internship course is for B.Eng. degree with a,core,0.2781989709089535,1707,0.5369468042381932,1707
+CN4119,This course aims to provide the fundamentals of pr,core,0.15868549908476587,1073,0.6011996710579454,1073
+CN4101,This course aims to provide students with a strong,core,0.13416580384803098,855,0.5823016738275097,855
+CN4102,Students will learn how to perform laboratory-scal,core,0.1625727532465181,1121,0.5652397543170495,1121
+CN4201R,This course provides students with a working knowl,elective,0.20398218642997742,1489,0.6205611904110366,1489
+CN4203R,The course introduces students to the principles o,elective,0.1000361671248248,530,0.46070177447793115,530
+CN4205R,This course provides students with a working knowl,elective,0.07980037450848877,387,0.40758607199985053,387
+CN4215R,This course provides students with the necessary b,elective,0.1812932020025938,1286,0.6679392306499882,1286
+CN4221R,This course will give students sound knowledge and,elective,0.12016601338712866,748,0.4909290124131479,748
+CN4227R,The first topic discusses the effect of model/plan,elective,0.048348885328395125,181,0.36533720246593404,181
+CN4240R,This module provides students with a working knowl,elective,0.1333496799127977,861,0.5454799490459892,861
+CN4248,"In this course, the concepts of sustainability and",elective,0.07600434834996747,355,0.4737558694218143,355
+CN4251,This course aims to produce chemical engineers who,elective,0.20275942926198065,1482,0.5481400892879706,1482
+CN5111,"Students will learn the fundamentals, methods and ",elective,0.14439233654368458,1024,0.4687821742199417,1024
+CN5191,The objective of this course is to provide a step-,elective,0.2809035124197691,1662,0.6564141990251784,1662
+CN5246,Students will learn the concepts of heterogeneous ,elective,0.03911589359589798,99,0.4153065003613813,99
+CN5124,This course provides students with concepts of var,elective,0.07191315791837986,309,0.36701319563093865,309
+CN5205,The course will provide the students with essentia,elective,0.09069491086152616,450,0.40514040134702833,450
+CN5206,This course covers fluid mechanics at an advanced ,elective,0.06580141935011362,247,0.3274471351799936,247
+CN5251,The objective of this course is to provide student,elective,0.046836661726483396,113,0.32020179831034773,113
+EE3331C,Feedback systems are ubiquitous in both the natura,elective,0.055441045356640205,129,0.30946728034718585,129
+ME2142,This course introduces students to fundamental con,elective,0.06798119949622212,261,0.3467302205018037,261
+ME3142,,elective,0.06766596502336875,264,0.29305139266215535,264
+EE3306,The course introduces recent technological develop,elective,0.1875389811864777,1262,0.5557130797062957,1262
+ME3163,The course introduces recent technological develop,elective,0.1875389811864777,1262,0.5557130797062957,1262
+EE4211,This course covers data analytics for the Internet,elective,0.11968371869692074,675,0.5119438807003773,675
+EE4212,This course offers a comprehensive introduction to,elective,0.13530026577271353,964,0.5644240431860412,964
+EE4302,This course provides the foundation for a more adv,elective,0.04461537063222703,85,0.24768025950919076,85
+EE4307,This 100% CA course introduces students to the var,elective,0.11311968131668407,661,0.38024971220722475,661
+EE4311,This course serves as an introduction to fuzzy log,elective,0.12788059676854202,788,0.46095230346176663,788
+EE4312,This course introduces fundamental concepts in art,elective,0.15202370928820755,1161,0.49471987999010114,1161
+EE4314,,elective,0.06766596502336875,264,0.29305139266215535,264
+EE4315,,elective,0.06766596502336875,264,0.29305139266215535,264
+ME3242,Students will learn the approaches used in the des,elective,0.10771521058559536,628,0.4199904442116252,628
+ME4262,This course provides a comprehensive introduction ,elective,0.18903251425463227,1246,0.6027658311410027,1246
+ME4248,This course covers fundamental concepts and techni,elective,0.17812747521080738,1218,0.4801175725907702,1218
+ME4246,This is a second module on control of linear dynam,elective,0.044833558031828064,86,0.22610440584044875,86
+ME5405,This course introduces machine vision devices and ,elective,0.15121964188865322,1117,0.5558815991651431,1117
+RB4301,,elective,0.06766596502336875,264,0.29305139266215535,264
+CN4218,This course provides students with both basic conc,elective,0.10956310389212197,641,0.3893016161118765,641
+CN4233R,This course covers important topics pertaining to ,elective,0.18572730484577996,1374,0.530561885616491,1374
+CN4247R,This course will start with general introduction a,elective,0.08417712531554125,316,0.3803447058846612,316
+CN4249,"In this course, basic principles of molecular biot",elective,0.009453322509008884,56,0.5469685769620539,56
+CN5172,The objective of this course to familiarize studen,elective,0.08009927222601404,300,0.6452731153720699,300
+CN5173,The objective of this course is to familiarize stu,elective,0.1089683397908444,533,0.556004478678737,533
