@@ -3,4 +3,10 @@ data
 .venv/
 __pycache__/
 *.parquet
-outputs/bertopic_global_model/
+*.csv
+outputs/
+*.py
+!notebooks/
+*.md
+!README.md
+.qodo/

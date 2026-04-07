@@ -1,4 +1,0 @@
-school,degree,degree_full_name,category,total_modules,total_jobs_scanned,market_size,market_cutoff_score,union_relevance,collective_relevance,active_core_utilization_pct,supporting_skill_breadth_pct,top_module,top_module_relevance,avg_module_relevance
-nus,information_systems,National University of Singapore - Information Systems,information_systems,50,22151,915,0.2995772128036879,0.3790115612924108,0.32673918564903043,0,0,IS4010,0.3226622101515515,0.18528888957974243
-smu,computinglaw,Singapore Management University - Computing and Law,information_systems,25,22151,556,0.26829116683434945,0.30951156336170993,0.26029314985588725,0,0,6021,0.2533484146047006,0.17043334786911563
-smu,information_systems,Singapore Management University - Information Systems,information_systems,19,22151,396,0.2919125386724495,0.2812222733161195,0.23400306367292126,0,0,24161,0.23940961071050063,0.16615840669042178

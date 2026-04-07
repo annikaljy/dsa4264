@@ -1,4 +1,0 @@
-school,degree,degree_full_name,category,total_modules,total_jobs_scanned,market_size,market_cutoff_score,union_relevance,collective_relevance,active_core_utilization_pct,supporting_skill_breadth_pct,top_module,top_module_relevance,avg_module_relevance
-sutd,architecture,Singapore University of Technology and Design - Architecture and Sustainable Design,design,33,22151,2667,0.2528769240203007,0.3322926912017131,0.26374960597116454,0,0,20-320,0.31764252907171997,0.16488586480090606
-nus,industrial_design,National University of Singapore - Industrial Design,design,34,22151,462,0.32337654252261094,0.31544409742310286,0.27698073303806087,0,0,ID2107,0.24318188943692368,0.18470593573004235
-nus,landscape_architecture,National University of Singapore - Landscape Architecture,design,26,22151,2772,0.21166026594899637,0.3117329825189906,0.24356234817715472,0,0,LAD3005,0.2637468064285101,0.1404817954377216
