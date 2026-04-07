@@ -8,7 +8,7 @@ from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 import uvicorn
 
-app = FastAPI(title="MOE Course Matcher API")
+app = FastAPI(title="Course Matcher API")
 
 app.add_middleware(
     CORSMiddleware,
@@ -36,12 +36,11 @@ def load_models():
     if "skill_embedding" not in all_modules_df.columns and "embedding" in all_modules_df.columns:
         all_modules_df = all_modules_df.rename(columns={"embedding": "skill_embedding"})
 
-    # Ensure school column exists (fallback to "NUS" for old parquets)
+    # ensure school column exists
     if "school" not in all_modules_df.columns:
         all_modules_df["school"] = "NUS"
 
-    # ── Drop unwanted NUS faculties ──
-    # For NUS, both 'faculty' and 'course' hold the faculty name (they're set equal at build time)
+    # drop certain faculties that are not applicable
     EXCLUDE_FACULTIES = {
         "NUS-ISS",
         "Cont and Lifelong Education",
@@ -51,7 +50,7 @@ def load_models():
     }
     before   = len(all_modules_df)
     nus_mask = all_modules_df["school"] == "NUS"
-    # Filter on whichever column is available
+    #faculty and course is the same for nus
     check_col = "faculty" if "faculty" in all_modules_df.columns else "course"
     exclude_mask = all_modules_df[check_col].isin(EXCLUDE_FACULTIES)
     all_modules_df = all_modules_df[~(nus_mask & exclude_mask)].reset_index(drop=True)
@@ -63,7 +62,6 @@ def load_models():
     print(all_modules_df.groupby("school").size().rename("modules").to_string())
 
 
-# ── Course display name mappings ─────────────────────────
 COURSE_NAMES = {
     # SUTD
     "architecture":          "Architecture and Sustainable Design (ASD)",
@@ -84,9 +82,9 @@ def display_course(raw: str) -> str:
     return COURSE_NAMES.get(str(raw).strip(), raw)
 
 
-# ── Core matcher ──────────────────────────────────────────
+# Core matcher
 def match_courses(job_text: str, top_n: int = 10) -> dict:
-    # 1. Embed job
+    # Embed job
     job_emb  = embedding_model.encode([job_text])
     mod_embs = np.stack(all_modules_df["skill_embedding"].values)
     sims     = cosine_similarity(job_emb, mod_embs).flatten()
@@ -94,35 +92,15 @@ def match_courses(job_text: str, top_n: int = 10) -> dict:
     mdf = all_modules_df.copy()
     mdf["similarity"] = sims
 
-    # 2. Top modules — school-aware so SMU/SUTD aren't crowded out by NUS volume
-    # Strategy: top 5 globally + top 2 from each non-NUS school (deduplicated)
+    # Top modules
     cols = ["code", "title", "school", "course", "description", "similarity"]
     sorted_mdf = mdf.sort_values("similarity", ascending=False)
-
-    top_global = sorted_mdf.head(5)[cols].copy()
-
-    per_school = []
-    for school_name in sorted_mdf["school"].unique():
-        if school_name == "NUS":
-            continue
-        school_top = (
-            sorted_mdf[sorted_mdf["school"] == school_name]
-            .head(2)[cols]
-            .copy()
-        )
-        per_school.append(school_top)
-
-    if per_school:
-        top_modules_df = pd.concat([top_global] + per_school, ignore_index=True)
-        top_modules_df = top_modules_df.drop_duplicates(subset=["code"])
-        top_modules_df = top_modules_df.sort_values("similarity", ascending=False).head(15)
-    else:
-        top_modules_df = sorted_mdf.head(10)[cols].copy()
+    top_modules_df = sorted_mdf.head(top_n)[cols].copy()
 
     top_modules_df["course"] = top_modules_df["course"].apply(display_course)
     top_modules = top_modules_df.to_dict(orient="records")
 
-    # 3. Aggregate by school + course
+    # Aggregate by school + course
     courses = []
     for (school, course_name), grp in mdf.groupby(["school", "course"]):
         best_row = grp.loc[grp["similarity"].idxmax()]
@@ -146,7 +124,7 @@ def match_courses(job_text: str, top_n: int = 10) -> dict:
     }
 
 
-# ── Routes ────────────────────────────────────────────────
+# api fetchers
 class TextRequest(BaseModel):
     job_title: str = ""
     job_text:  str
