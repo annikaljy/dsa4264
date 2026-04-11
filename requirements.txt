@@ -3,9 +3,11 @@ pandas
 pyarrow
 fastparquet
 
-# HTML & Text Processing
+# HTTP & Web Scraping
+requests
 beautifulsoup4
 lxml
+playwright
 
 # Machine Learning & Embeddings
 torch
