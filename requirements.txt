@@ -1,5 +1,14 @@
-# Data Manipulation & Storage
+# Core Data Science Stack
+jupyter
 pandas
+numpy
+matplotlib
+seaborn
+scipy
+ipython
+ipykernel
+
+# Data Storage & I/O
 pyarrow
 fastparquet
 
@@ -9,13 +18,24 @@ beautifulsoup4
 lxml
 playwright
 
-# Machine Learning & Embeddings
+# Machine Learning & NLP
 torch
 sentence-transformers
+scikit-learn
+
+# Topic Modeling & Clustering
+bertopic
+umap-learn
+hdbscan
+gensim
+optuna
+wasabi
 
 # Utilities
 tqdm
+kneed
 
-matplotlib
-seaborn
+# Visualization
 plotly
+
+
