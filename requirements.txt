@@ -38,4 +38,11 @@ kneed
 # Visualization
 plotly
 
+<<<<<<< Updated upstream
+=======
+# Documentation
+mkdocs
+mkdocs-material
+
+>>>>>>> Stashed changes
 

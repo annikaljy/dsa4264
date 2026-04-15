@@ -1,0 +1,29 @@
+site_name: University-Market Alignment Analysis
+site_description: A data-driven framework to evaluate how well university curricula align with labour market demand
+site_author: DSA4264 Team
+
+theme:
+  name: material
+  palette:
+    primary: indigo
+    accent: indigo
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - toc.integrate
+
+nav:
+  - Technical Report: report.md
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - tables
+  - attr_list
+  - md_in_html
+
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
