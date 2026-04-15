@@ -22,6 +22,21 @@ Place `DSA4264 Data/` folder in project root.
 - `bertopic_combined.ipynb`
 - `embeddings.ipynb`
 
+## Web App
+To run:
+```bash
+docker compose up --build
+```
+Once the containers are healthy, the services are available at:
+- Frontend UI: http://localhost:3000
+- Backend API: http://localhost:8000
+
+To stop:
+``` bash
+docker compose down
+```
+Add -d to either command to run in the background.
+
 ## Technical Report
 
 View at: [Report](https://annikaljy.github.io/dsa4264/)
