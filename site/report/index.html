@@ -1,0 +1,939 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A data-driven framework to evaluate how well university curricula align with labour market demand">
+      
+      
+        <meta name="author" content="DSA4264 Team">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Technical Report - University-Market Alignment Analysis</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#university-market-alignment-analysis" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="University-Market Alignment Analysis" class="md-header__button md-logo" aria-label="University-Market Alignment Analysis" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            University-Market Alignment Analysis
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Technical Report
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="University-Market Alignment Analysis" class="md-nav__button md-logo" aria-label="University-Market Alignment Analysis" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    University-Market Alignment Analysis
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technical Report
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technical Report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-background" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Background
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Background">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-objective" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Objective
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-research-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Research Questions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-problem-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Problem Scope
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Problem Scope">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-success-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Success Criteria
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-data-and-methodology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Data and Methodology
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Data and Methodology">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-data-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Data Sources
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-data-collection-and-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Data Collection and Processing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 Data Collection and Processing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321-university-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.1 University Modules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322-mycareersfuture-jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.2 MyCareersFuture Jobs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-semantic-representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Semantic Representation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-topic-modelling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Topic Modelling
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-macro-question" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Macro Question
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Macro Question">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rationale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rationale
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-wide-skill-coverage-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System-Wide Skill Coverage Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#job-level-deduplicated-skill-coverage-distribution-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Job-Level Deduplicated Skill Coverage Distribution Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#demand-supply-gaps-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Demand-Supply Gaps Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-micro-question" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Micro Question
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Micro Question">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-module-ranking-using-validated-employment-predictors-spearman-correlation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Module Ranking Using Validated Employment Predictors: Spearman Correlation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2 Module Ranking Using Validated Employment Predictors: Spearman Correlation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rationale_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rationale
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methodology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Methodology
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-degree-job-alignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Degree-Job Alignment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3 Degree-Job Alignment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rationale_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rationale
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methodology_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Methodology
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analysis-and-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Analysis and Results
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Results
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-policy-recommendations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Policy Recommendations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Limitations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-future-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Future Work
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="university-market-alignment-analysis">University-Market Alignment Analysis</h1>
+<h2 id="1-background">1. Background</h2>
+<p>This project addresses a key policy concern for MOM and MOE: whether university curricula are keeping pace with Singapore's labour market. Despite fairly strong labour market conditions, weaker graduate employment outcomes suggest that the issue goes beyond job availability to include how well graduates' skills align with employer demand. As labour demand trends evolve, there remains no comprehensive, data-driven framework to assess how well universities are supplying skills demanded by the labour market in real time, limiting effective policy intervention.</p>
+<h3 id="11-objective">1.1 Objective</h3>
+<p>To develop a data-driven framework to evaluate how well university curricula align with labour market demand at both the system-wide and degree-specific levels.</p>
+<h3 id="12-research-questions">1.2 Research Questions</h3>
+<p>This study addresses the overarching question: </p>
+<p><strong>How well are universities preparing students for real-world jobs?</strong></p>
+<p>To answer this, the analysis is conducted at two levels:</p>
+<ul>
+<li><strong>Macro-level:</strong> To what extent are skills demanded by the job market covered by university modules today?</li>
+<li><strong>Micro-level:</strong> Which degrees demonstrate the strongest broad-market and intended-industry alignment?</li>
+</ul>
+<h2 id="2-problem-scope">2. Problem Scope</h2>
+<p>This study focuses on Singapore's public university sector, focusing on NUS, SMU and SUTD, due to sufficiently accessible module information. For the micro-level analysis, 21 full-time undergraduate degree programmes with <a href="https://www.moe.gov.sg/api/media/a43cdd0b-4f2d-44f8-a98c-7ff48a7670ac/Web-Publication-NUS-GES-2025.pdf">Graduate Employment Survey (GES) 2025</a> response rates of at least 65% were further selected. For NUS, the highest and lowest five performing degree programmes by full-time permanent employment were included to preserve variation in employment outcomes, keep the analysis tractable, and enable clear comparison within a larger institution.</p>
+<p>These scoping choices define the study's boundaries: it measures current alignment rather than curriculum change over time, focuses on full-time graduate employment in the local job market, and treats module descriptions as proxies for taught skills.</p>
+<h3 id="21-success-criteria">2.1 Success Criteria</h3>
+<p>Success is defined by whether the framework produces technically credible and policy-relevant evidence that can support curriculum review and higher education planning.</p>
+<ul>
+<li><strong>Policy Goal:</strong> provide a clear, data-driven view of how well university degrees align with labour market demand, highlighting key skill gaps and cross-programme differences.</li>
+<li><strong>Operational Goal:</strong> develop a reproducible framework that compares module content with job market demand and produces interpretable alignment measures that can support curriculum review.</li>
+</ul>
+<h2 id="3-data-and-methodology">3. Data and Methodology</h2>
+<h3 id="31-data-sources">3.1 Data Sources</h3>
+<p>This study uses two main data sources: </p>
+<ul>
+<li>Job postings between 25 January 2026 to 31 January 2026 from MyCareersFuture</li>
+<li>University module data from NUS, SMU, and SUTD</li>
+</ul>
+<p>Job postings capture labour market skill demand, while university module data capture the skills supplied through curricula.</p>
+<h3 id="32-data-collection-and-processing">3.2 Data Collection and Processing</h3>
+<h4 id="321-university-modules">3.2.1 University Modules</h4>
+<p>NUS module data were retrieved from the <a href="https://api.nusmods.com/v2">NUSMods API</a> for academic year 2025-2026. <a href="https://modules.smu.edu.sg">SMU</a> and <a href="https://sutd.edu.sg/education/undergraduate/modules">SUTD</a> module data were collected from their official module listings using Playwright and Beautifulsoup respectively.</p>
+<h4 id="322-mycareersfuture-jobs">3.2.2 MyCareersFuture Jobs</h4>
+<p>Job posting data was sourced from 22,720 JSON files, each representing one listing. Files were extracted from a compressed archive and processed in parallel using ThreadPoolExecutor. </p>
+<p>For each job posting, the following fields were extracted:</p>
+<ul>
+<li><strong>uuid</strong> — unique job identifier</li>
+<li><strong>title</strong> — job title</li>
+<li><strong>description</strong> — full job description </li>
+<li><strong>minimumYearsExperience</strong> — minimum experience required</li>
+<li><strong>skills</strong> — list of required skills</li>
+<li><strong>employmentTypes</strong> — employment type (e.g. full-time, contract)</li>
+<li><strong>ssicCode</strong> — occupational and qualification classification codes</li>
+</ul>
+<p>Raw job descriptions were stored in HTML and cleaned by removing HTML tags with BeautifulSoup, removing emojis with Unicode regex, and normalising whitespace. The dataset was then filtered to retain only full-time, permanent, and contract postings, yielding a final corpus of <strong>16,686 job postings</strong>.</p>
+<h3 id="33-semantic-representation">3.3 Semantic Representation</h3>
+<p>All text-based comparisons in this study use the same semantic representation pipeline. Job descriptions, job-demanded skills and university module descriptions were embedded using <strong>all-mpnet-base-v2</strong> and saved as <code>10_nus_modules_embedded.parquet</code>, <code>all_smu_modules_embedded.parquet</code>, and <code>all_sutd_modules_embedded.parquet</code>. Semantic closeness was measured using <strong>cosine similarity</strong> in a shared embedding space, ensuring methodological consistency and providing a scalable way to compare curriculum and labour market text.</p>
+<h3 id="34-topic-modelling">3.4 Topic Modelling</h3>
+<p>To map the job market landscape, <strong>BERTopic</strong> was applied to the 16,686 filtered job postings. UMAP and HDBSCAN hyperparameters were jointly optimised with <strong>Optuna</strong> over 5 trials, maximising coherence while penalising outlier ratios. The selected configuration (<code>n_neighbors=45</code>, <code>n_components=3</code>, <code>min_cluster_size=18</code>) produced <strong>157 job clusters</strong>, with 5,187 postings classified as outliers.</p>
+<p>Topic representations were further refined using <strong>KeyBERTInspired</strong> and <strong>Maximal Marginal Relevance</strong> to ensure that representative keywords were both semantically relevant within each cluster.</p>
+<div class="highlight"><pre><span></span><code><span class="n">representation_model</span> <span class="o">=</span> <span class="p">[</span><span class="n">KeyBERTInspired</span><span class="p">(),</span> <span class="n">MaximalMarginalRelevance</span><span class="p">(</span><span class="n">diversity</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)]</span>
+</code></pre></div>
+<p><strong>Figure 1</strong> shows topics being well-distributed across the 2D projection space, with circle sizes reflecting job volume. Notably, the large cluster of tightly grouped circles suggests semantically related roles, while isolated circles represent niche domains which confirms the model's ability to capture a broad and diverse job market taxonomy.</p>
+<p><strong>Figure 2</strong> validates the semantic coherence of individual topics. Each topic exhibits clearly distinct, high scoring keywords. These topics are then used as the job market benchmark for evaluating university modules.</p>
+<p><img alt="Fig 1. Topic Word Scores" src="../images/image14.png" /></p>
+<p><img alt="Fig 2. Intertopic Distance Map" src="../images/image15.png" /></p>
+<p>Modules were embedded using the same model, then assigned to BERTopic clusters. For each degree, all modules' assigned clusters identify relevant jobs. Cosine similarity between module and job embeddings produces final rankings using composite scores (40% cluster breadth, 40% average similarity, 20% max similarity), balancing curriculum-wide relevance with specialization depth.</p>
+<h2 id="4-macro-question">4. Macro Question</h2>
+<p>Section 4 addresses: </p>
+<p><strong>To what extent are skills demanded by the job market covered by university modules today?</strong></p>
+<h3 id="rationale">Rationale</h3>
+<p>This section provides a system-wide assessment of how well university curricula cover job-demanded skills. As MOE seeks to assess whether the public university sector sufficiently equips students with these skills, institution-level analysis alone may overlook complementarities across universities.</p>
+<h3 id="system-wide-skill-coverage-analysis">System-Wide Skill Coverage Analysis</h3>
+<p>Using Section 3.3's shared semantic representation, deduplicated job-demanded skills were compared against skill embeddings of each university and a pooled all-schools set. A demanded skill was considered <strong>covered</strong> if its cosine similarity to at least one supplied skill exceeded <strong>0.55</strong>. </p>
+<p>Two measures were computed: </p>
+<ul>
+<li><strong>Deduplicated coverage</strong>, which considers unique demanded skills; and</li>
+<li><strong>Non-deduplicated coverage</strong>, which weighs demanded skills by their frequency across job postings.</li>
+</ul>
+<p>Coverage was then analysed at three levels: </p>
+<ol>
+<li>System-wide skills coverage</li>
+<li>Job-level deduplicated coverage distribution</li>
+<li>Demand-supply gaps for highly demanded skills</li>
+</ol>
+<p><img alt="Figure 3. Skill Coverage Pie Charts" src="../images/image16.png" /></p>
+<p><strong>Deduplicated coverage (50.3%)</strong> is much higher than <strong>non-deduplicated coverage (8.5%)</strong>, suggesting that universities cover a reasonable range of skills but not the ones most demanded. NUS records the highest coverage on both measures, likely reflecting its broader disciplinary scope, but no university performs strongly enough on its own to close the gap. </p>
+<h3 id="job-level-deduplicated-skill-coverage-distribution-analysis">Job-Level Deduplicated Skill Coverage Distribution Analysis</h3>
+<p>Job-level coverage was then computed as the proportion of a posting's unique demanded skills that were covered. </p>
+<p><img alt="Figure 4. Job-Level Skill Coverage Histograms" src="../images/image4.png" /></p>
+<p>Across all three universities, the mean and median job-level coverage are both <strong>56.2%</strong>, indicating moderate coverage per job posting. NUS again records the highest and most consistent job-level coverage, with a mean and median of 52.4% and 52.6% respectively, followed by SMU and SUTD which show lower and more uneven performance across jobs. </p>
+<h3 id="demand-supply-gaps-analysis">Demand-Supply Gaps Analysis</h3>
+<p>For each demanded skill, the <strong>skill gap</strong> was defined as the difference between job demand and university supply. </p>
+<p><img alt="Figure 5. Demand-Supply Gap Scatter Plot and Dumbbell Plot" src="../images/image9.png" /></p>
+<p>University skill supply is generally well below job market demand, with most points falling below the parity line, suggesting that the issue is not just teaching these skills, but teaching them at sufficient scale. The largest gaps are concentrated in broad, transferable skills like teamwork, interpersonal skills, and customer service, rather than narrow technical skills.</p>
+<p>We then focused on the twelve most in-demand skills, expressing university skill supply as a percentage of job market demand. </p>
+<p><img alt="Figure 6. Top 12 Most In-Demand Skills Coverage Bar Graph" src="../images/image2.png" /></p>
+<p>Even for the best-covered skills, including leadership and communication, university supply is only about <strong>1% or less</strong> of job demand. Coverage is highest for NUS, followed by SMU and finally, SUTD. </p>
+<p><strong>Overall</strong>, the findings suggest that universities cover a reasonable range of unique job-demanded skills, but cover the most in-demand skills much more weakly. This pattern remains broadly consistent across robustness checks, including threshold sensitivity tests, bootstrap resampling, and a lexical exact-phrase baseline.</p>
+<h2 id="5-micro-question">5. Micro Question</h2>
+<p>Section 5 addresses: </p>
+<p><strong>Which degrees demonstrate the strongest broad-market and intended-industry alignment?</strong></p>
+<p>This micro analysis proceeds in two stages:</p>
+<ol>
+<li>Validation of module-level predictors linked to employment outcomes</li>
+<li>Degree-job alignment analysis through broad market reach and targeted market fit</li>
+</ol>
+<h3 id="51-prerequisites">5.1 Prerequisites</h3>
+<p>While the macro-level analysis provides a broad view of curriculum skill coverage, a critical limitation is that individual module-to-job mappings may systematically undervalue foundational modules.</p>
+<p><strong>Figure 7</strong> shows that foundational modules are left-skewed in the distribution, below the median of 0.32. In contrast, higher level modules are more sparse, with many scoring above 0.6. This pattern holds across all 10 degrees, suggesting that foundational modules undervaluation is a structural phenomenon rather than a degree-specific anomaly.</p>
+<p><img alt="Fig 7. Cosine Similarity Across All 10 NUS Degrees" src="../images/image6.png" /></p>
+<p>This presents a methodological gap: a naive direct-similarity mapping would incorrectly flag foundational modules as curriculum weaknesses. To address this methodological gap, we introduce <strong>prerequisite breadth</strong> defined as the number of downstream modules that structurally depend on a given module using <code>dependent_mods_dedup.csv</code> and <code>nus_prerequisite_graph.json</code>:</p>
+<div class="arithmatex">\[
+N_{prereq}(c) = |\{c' : c \in Prereqs(c')\}|
+\]</div>
+<p><strong>Figure 8</strong> plots each module along both dimensions for all 10 degrees. Across degrees, foundational modules like MNO1706 and MKT1705 in Accountancy and Real Estate, and EE2211 and MA1513 in Civil Engineering, consistently occupy the top left quadrant. Together, they suggest that a two-dimensional framework combining direct job relevance with prerequisite breadth is necessary for a complete picture. How these foundational modules are formally incorporated into our relevance scoring is addressed in the following micro-level analysis.</p>
+<p><img alt="Figure 8. Cosine Similarity Against Prerequisite Breadth Across All Degrees" src="../images/image8.png" /></p>
+<h3 id="52-module-ranking-using-validated-employment-predictors-spearman-correlation">5.2 Module Ranking Using Validated Employment Predictors: Spearman Correlation</h3>
+<h4 id="rationale_1">Rationale</h4>
+<p>Not all curriculum features contribute equally to graduate employment outcomes. To avoid arbitrary weighting, an approach that grounds downstream module rankings in empirical relationships was adopted: module-level signals for degree-level employment rates were identified and used to score individual modules.</p>
+<h4 id="methodology">Methodology</h4>
+<p><strong>Job relevance</strong> (<span class="arithmatex">\(s_{\text{jobs}}\)</span>). Measures semantic cosine similarity between module descriptions and job postings (Section 3).</p>
+<p><strong>Prerequisite importance</strong> (<span class="arithmatex">\(s_{\text{prereqs}}\)</span>; NUS only). Measures a modules' structural importance using the number of downstream modules unlocked in the prerequisite graph using breadth-first search (BFS).</p>
+<div class="arithmatex">\[
+\mathrm{Desc}(m)=\{\,m' \in M_p \mid m' \text{ is reachable from } m \text{ in the prerequisite graph}\,\}
+\]</div>
+<div class="arithmatex">\[
+s_{\text{prereqs}}(m)=\frac{|\mathrm{Desc}(m)|}{20}
+\]</div>
+<p><strong>Module level</strong> (<span class="arithmatex">\(s_{\text{level}}\)</span>). Extracted from module codes and normalized to reflect curricular advancement.</p>
+<div class="arithmatex">\[
+s_{\text{level}}(m)=\frac{\text{Level}(m)}{4}
+\]</div>
+<p><strong>Module type</strong> (core_boost). Binary indicator distinguishing core modules (1) from electives (0).</p>
+<p>Degree-level predictors were constructed by aggregating module-level signals within each degree. Specifically, for each degree, we computed averages for job relevance, module level, and prerequisite importance across its modules, as well as the proportion of core modules.</p>
+<p>These degree-level predictors were correlated with GES's full-time permanent employment rates using <strong>Spearman rank correlation</strong>. Significant predictors were converted into normalized weights:</p>
+<div class="arithmatex">\[
+w_i=\frac{|\rho_i|}{\sum_k |\rho_k|}
+\]</div>
+<p>Module composite scores were then computed using only validated features:</p>
+<div class="arithmatex">\[
+\text{CompositeScore}_m=\sum_i w_i x_{mi}
+\]</div>
+<h3 id="53-degree-job-alignment">5.3 Degree-Job Alignment</h3>
+<h4 id="rationale_2">Rationale</h4>
+<p>Degree-job alignment was evaluated at two levels: <strong>broad market reach</strong> for the general labour market, and <strong>targeted market fit</strong> for the degree's intended occupational domain.</p>
+<h4 id="methodology_1">Methodology</h4>
+<p>Degree-job alignment was evaluated using weighted module-job similarity scores, where module contributions were based on the Spearman-validated weights from Section 5.2. Degree-specific target markets were defined using BERTopic clusters.</p>
+<p>For degree <span class="arithmatex">\(p\)</span> and job <span class="arithmatex">\(j\)</span>, degree-job similarity is defined as:</p>
+<div class="arithmatex">\[
+S(p,j)=\sum_{m\in p}\tilde{w}_m\,s(m,j)
+\]</div>
+<p>where module weights are normalized within each degree:</p>
+<div class="arithmatex">\[
+\tilde{w}_m=\frac{\text{CompositeScore}_m}{\sum_{m'\in p}\text{CompositeScore}_{m'}}
+\]</div>
+<p>A job is considered <strong>reachable</strong> if degree-job similarity exceeds the calibrated threshold of <strong>0.55</strong>:</p>
+<div class="arithmatex">\[
+\text{Reach}(p)=\frac{1}{|J|}\sum_{j\in J}\mathbf{1}\big(S(p,j)\ge 0.55\big)
+\]</div>
+<h4 id="analysis-and-results">Analysis and Results</h4>
+<p>All degrees are assessed against a shared job pool to ensure comparable cross-school evaluation. </p>
+<p>Module-job alignment is aggregated into degree-job scores using curriculum weights and Spearman-validated module importance. Degree performance is evaluated using indicators of alignment strength, market breadth and curricular robustness. </p>
+<p>The final similarity threshold is calibrated using a <strong>Monte Carlo null procedure</strong>. Pooled degree-job scores are compared against a structured null that preserves embedding geometry while removing semantic alignment, so null exceedances reflect chance overlap rather than meaningful correspondence. </p>
+<p>The observed score distribution lies to the right of the null distribution, supporting the use of high null quantiles as a specificity floor. </p>
+<p>To identify degree-specific relevant markets, the <strong>Kneedle algorithm</strong> was applied to BERTopic-matched jobs (Section 3), detecting the inflection point in degree-job similarity curves, adaptively defining thresholds where similarity drops sharply. Safety bounds (min 300, max 2000 jobs, threshold ≥0.15) prevented market dilution while ensuring statistical robustness.</p>
+<p>Candidate thresholds are then assessed using a threshold sweep over reach and breadth retention, collapse risk, and ranking and profile stability: </p>
+<div class="arithmatex">\[
+t^*=\max\{t\in T: t \text{ satisfies null, stability, and retention constraints}\}
+\]</div>
+<p><strong>0.250</strong> was selected as the largest admissible threshold that satisfies all null, stability and retention constraints, making it conservative, stable and defensible for public-sector comparison. </p>
+<p><img alt="Figure 9. Real vs Null Degree-Job Similarity Distributions" src="../images/image13.png" /></p>
+<p><img alt="Figure 10. Threshold Selection Dashboard" src="../images/image5.png" /></p>
+<h4 id="results">Results</h4>
+<p><img alt="Figure 11. Semantic Market Alignment" src="../images/image12.png" /></p>
+<ul>
+<li>NUS Industrial Design and the Accountancy programmes are the strongest broad-market performers, with reach above 21% and mean similarity around 0.21.</li>
+<li>SMU Economics (0.43%, 0.123) and NUS Data Science Analytics (1.38%, 0.133) are the weakest. </li>
+</ul>
+<p><img alt="Figure 12. Top 6 Broadest Degrees" src="../images/image11.png" /></p>
+<ul>
+<li>SMU Business is the broadest degree, followed by NUS Industrial Design and the two Accountancy programmes.</li>
+<li>SUTD Architecture is relatively broad, but more concentrated in construction- and engineering-related families.</li>
+</ul>
+<p><img alt="Figure 13. Programme Robustness" src="../images/image10.png" /></p>
+<ul>
+<li>SMU Business appears broadly robust, while SUTD Design AI and SUTD Engineering Systems are more concentrated in a small number of modules.</li>
+<li>These robustness patterns should be interpreted cautiously, as they depend partly on the weighting scheme used.</li>
+</ul>
+<p>We next turn to <strong>targeted market fit</strong>, which assesses how well each degree prepares graduates for jobs in its intended field using the weighted average similarity of its top-5 matching modules per job.</p>
+<p>These collective scores were pooled across all 21 degrees to derive preparation quality thresholds: <strong>well-prepared</strong> (≥67th percentile, 0.425), <strong>moderately prepared</strong> (33rd-67th percentile, 0.342-0.425), and <strong>under-prepared</strong> (&lt;33rd percentile, 0.342).</p>
+<p>Across the 21 degrees, substantial variation in targeted market fit was observed:</p>
+<p><img alt="Figure 14. Cross-degree ranking of targeted market fit" src="../images/image7.png" /></p>
+<ul>
+<li>Business, Accountancy, and Information Systems record the highest shares of well-prepared jobs (75.8–81.1%).</li>
+<li>Data Science (7.6%), Economics (13.7%), and Engineering Systems (14.7%) record the lowest shares of well-prepared jobs.</li>
+<li>These differences suggest that degrees may face different alignment challenges and therefore may require different responses.</li>
+</ul>
+<p>By field, Business degrees (mean: 59.2% well-prepared) significantly outperform Computing (37.6%) and Data Science (7.6%). This is concerning for Singapore's digital economy goals. </p>
+<p><img alt="Figure 15. Targeted market fit by academic category" src="../images/image1.png" /></p>
+<p>Market size showed only a weak positive correlation with preparation quality (<span class="arithmatex">\(\rho = 0.089\)</span>), suggesting that job availability alone does not strongly predict degree readiness.</p>
+<p><img alt="Figure 16. Relationship between market size and targeted market fit" src="../images/image3.png" /></p>
+<h2 id="6-policy-recommendations">6. Policy Recommendations</h2>
+<p><strong>First</strong>, undergraduate curricula should emphasize more on applied and project-based learning. Higher-level modules show stronger labour market alignment given their practical focus. Expanding the use of industry projects and collaborative work would enhance students' development of job-relevant skills.</p>
+<p><strong>Second</strong>, universities should strengthen existing degrees before expanding degree offerings. As NUS introduces new degrees in high-demand fields such as Robotics &amp; Machine Intelligence and Computing in AI, they may not always be well aligned and preparation quality varies across degrees. This risks neglecting current students in misaligned programs who require immediate curriculum improvements. Policymakers and universities should prioritise refining existing curricula using degree-level evidence before introducing new degrees.</p>
+<p><strong>Finally</strong>, government-industry partnerships should be formalised to support real-time curriculum feedback. As labour market needs evolve rapidly, especially in emerging sectors, periodic curriculum reviews may be insufficient. MOE can collaborate with the Economic Development Board (EDB) to access real-time job demand data and engage key industry partners to keep curricula responsive.</p>
+<h2 id="7-limitations">7. Limitations</h2>
+<p>Several limitations should be acknowledged:</p>
+<ul>
+<li>Module descriptions are used as proxies for taught skills, and may not fully reflect actual content due to vague or inconsistent descriptions across institutions.</li>
+<li>Degree-level representation assumes exposure to all skills in the curated module list, although actual skill acquisition depends on the students' module choices. </li>
+<li>Focusing mainly on core and selected modules may understate transferable, especially non-technical skills honed through common curriculum components.</li>
+<li>The job-posting data only provides a partial snapshot of labour demand from a single source over a limited period which may over- or under-represent certain sectors.</li>
+</ul>
+<h2 id="8-future-work">8. Future Work</h2>
+<p>Future work could address these limitations by extending the analysis to more universities and degree programmes using official administrative data, rather than incomplete or undergraduate-only public module information. Incorporating exact pathway data would also allow for more precise estimation of realised skill profiles.</p>
+<p>Further validation could benchmark alignment measures against labour market outcomes such as employment rates, wages, or employer evaluations. A longitudinal design could also track how curriculum-labour market alignment changes over time.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "toc.integrate"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

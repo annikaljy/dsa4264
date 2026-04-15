@@ -83,9 +83,13 @@ representation_model = [KeyBERTInspired(), MaximalMarginalRelevance(diversity=0.
 
 **Figure 2** validates the semantic coherence of individual topics. Each topic exhibits clearly distinct, high scoring keywords. These topics are then used as the job market benchmark for evaluating university modules.
 
-![Fig 1. Topic Word Scores](images/image14.png)
+![](images/image14.png)
 
-![Fig 2. Intertopic Distance Map](images/image15.png)
+**Fig 1. Topic Word Scores**
+
+![](images/image15.png)
+
+**Fig 2. Intertopic Distance Map**
 
 Modules were embedded using the same model, then assigned to BERTopic clusters. For each degree, all modules' assigned clusters identify relevant jobs. Cosine similarity between module and job embeddings produces final rankings using composite scores (40% cluster breadth, 40% average similarity, 20% max similarity), balancing curriculum-wide relevance with specialization depth.
 
@@ -114,7 +118,9 @@ Coverage was then analysed at three levels:
 2. Job-level deduplicated coverage distribution
 3. Demand-supply gaps for highly demanded skills
 
-![Figure 3. Skill Coverage Pie Charts](images/image16.png)
+![](images/image16.png)
+
+**Figure 3. Skill Coverage Pie Charts**
 
 **Deduplicated coverage (50.3%)** is much higher than **non-deduplicated coverage (8.5%)**, suggesting that universities cover a reasonable range of skills but not the ones most demanded. NUS records the highest coverage on both measures, likely reflecting its broader disciplinary scope, but no university performs strongly enough on its own to close the gap. 
 
@@ -122,7 +128,9 @@ Coverage was then analysed at three levels:
 
 Job-level coverage was then computed as the proportion of a posting's unique demanded skills that were covered. 
 
-![Figure 4. Job-Level Skill Coverage Histograms](images/image4.png)
+![](images/image4.png)
+
+**Figure 4. Job-Level Skill Coverage Histograms**
 
 Across all three universities, the mean and median job-level coverage are both **56.2%**, indicating moderate coverage per job posting. NUS again records the highest and most consistent job-level coverage, with a mean and median of 52.4% and 52.6% respectively, followed by SMU and SUTD which show lower and more uneven performance across jobs. 
 
@@ -130,13 +138,17 @@ Across all three universities, the mean and median job-level coverage are both *
 
 For each demanded skill, the **skill gap** was defined as the difference between job demand and university supply. 
 
-![Figure 5. Demand-Supply Gap Scatter Plot and Dumbbell Plot](images/image9.png)
+![](images/image9.png)
+
+**Figure 5. Demand-Supply Gap Scatter Plot and Dumbbell Plot**
 
 University skill supply is generally well below job market demand, with most points falling below the parity line, suggesting that the issue is not just teaching these skills, but teaching them at sufficient scale. The largest gaps are concentrated in broad, transferable skills like teamwork, interpersonal skills, and customer service, rather than narrow technical skills.
 
 We then focused on the twelve most in-demand skills, expressing university skill supply as a percentage of job market demand. 
 
-![Figure 6. Top 12 Most In-Demand Skills Coverage Bar Graph](images/image2.png)
+![](images/image2.png)
+
+**Figure 6. Top 12 Most In-Demand Skills Coverage Bar Graph**
 
 Even for the best-covered skills, including leadership and communication, university supply is only about **1% or less** of job demand. Coverage is highest for NUS, followed by SMU and finally, SUTD. 
 
@@ -159,7 +171,9 @@ While the macro-level analysis provides a broad view of curriculum skill coverag
 
 **Figure 7** shows that foundational modules are left-skewed in the distribution, below the median of 0.32. In contrast, higher level modules are more sparse, with many scoring above 0.6. This pattern holds across all 10 degrees, suggesting that foundational modules undervaluation is a structural phenomenon rather than a degree-specific anomaly.
 
-![Fig 7. Cosine Similarity Across All 10 NUS Degrees](images/image6.png)
+![](images/image6.png)
+
+**Fig 7. Cosine Similarity Across All 10 NUS Degrees**
 
 This presents a methodological gap: a naive direct-similarity mapping would incorrectly flag foundational modules as curriculum weaknesses. To address this methodological gap, we introduce **prerequisite breadth** defined as the number of downstream modules that structurally depend on a given module using `dependent_mods_dedup.csv` and `nus_prerequisite_graph.json`:
 
@@ -169,7 +183,9 @@ $$
 
 **Figure 8** plots each module along both dimensions for all 10 degrees. Across degrees, foundational modules like MNO1706 and MKT1705 in Accountancy and Real Estate, and EE2211 and MA1513 in Civil Engineering, consistently occupy the top left quadrant. Together, they suggest that a two-dimensional framework combining direct job relevance with prerequisite breadth is necessary for a complete picture. How these foundational modules are formally incorporated into our relevance scoring is addressed in the following micro-level analysis.
 
-![Figure 8. Cosine Similarity Against Prerequisite Breadth Across All Degrees](images/image8.png)
+![](images/image8.png)
+
+**Figure 8. Cosine Similarity Against Prerequisite Breadth Across All Degrees**
 
 ### 5.2 Module Ranking Using Validated Employment Predictors: Spearman Correlation
 
@@ -261,23 +277,33 @@ $$
 
 **0.250** was selected as the largest admissible threshold that satisfies all null, stability and retention constraints, making it conservative, stable and defensible for public-sector comparison. 
 
-![Figure 9. Real vs Null Degree-Job Similarity Distributions](images/image13.png)
+![](images/image13.png)
 
-![Figure 10. Threshold Selection Dashboard](images/image5.png)
+**Figure 9. Real vs Null Degree-Job Similarity Distributions**
+
+![](images/image5.png)
+
+**Figure 10. Threshold Selection Dashboard**
 
 #### Results
 
-![Figure 11. Semantic Market Alignment](images/image12.png)
+![](images/image12.png)
+
+**Figure 11. Semantic Market Alignment**
 
 - NUS Industrial Design and the Accountancy programmes are the strongest broad-market performers, with reach above 21% and mean similarity around 0.21.
 - SMU Economics (0.43%, 0.123) and NUS Data Science Analytics (1.38%, 0.133) are the weakest. 
 
-![Figure 12. Top 6 Broadest Degrees](images/image11.png)
+![](images/image11.png)
+
+**Figure 12. Top 6 Broadest Degrees**
 
 - SMU Business is the broadest degree, followed by NUS Industrial Design and the two Accountancy programmes.
 - SUTD Architecture is relatively broad, but more concentrated in construction- and engineering-related families.
 
-![Figure 13. Programme Robustness](images/image10.png)
+![](images/image10.png)
+
+**Figure 13. Programme Robustness**
 
 - SMU Business appears broadly robust, while SUTD Design AI and SUTD Engineering Systems are more concentrated in a small number of modules.
 - These robustness patterns should be interpreted cautiously, as they depend partly on the weighting scheme used.
@@ -288,7 +314,9 @@ These collective scores were pooled across all 21 degrees to derive preparation 
 
 Across the 21 degrees, substantial variation in targeted market fit was observed:
 
-![Figure 14. Cross-degree ranking of targeted market fit](images/image7.png)
+![](images/image7.png)
+
+**Figure 14. Cross-degree ranking of targeted market fit**
 
 - Business, Accountancy, and Information Systems record the highest shares of well-prepared jobs (75.8–81.1%).
 - Data Science (7.6%), Economics (13.7%), and Engineering Systems (14.7%) record the lowest shares of well-prepared jobs.
@@ -296,11 +324,15 @@ Across the 21 degrees, substantial variation in targeted market fit was observed
 
 By field, Business degrees (mean: 59.2% well-prepared) significantly outperform Computing (37.6%) and Data Science (7.6%). This is concerning for Singapore's digital economy goals. 
 
-![Figure 15. Targeted market fit by academic category](images/image1.png)
+![](images/image1.png)
+
+**Figure 15. Targeted market fit by academic category**
 
 Market size showed only a weak positive correlation with preparation quality ($\rho = 0.089$), suggesting that job availability alone does not strongly predict degree readiness.
 
-![Figure 16. Relationship between market size and targeted market fit](images/image3.png)
+![](images/image3.png)
+
+**Figure 16. Relationship between market size and targeted market fit**
 
 ## 6. Policy Recommendations 
 

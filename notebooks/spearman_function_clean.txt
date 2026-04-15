@@ -1,0 +1,233 @@
+def analyze_degree_program_spearman(university, degree_name, detailed=True):
+    """
+    Analyze degree program using SPEARMAN-validated metrics (NUS only).
+
+    Replaces unreliable OLS with statistically significant correlations.
+    """
+
+    print(f"\n{'='*80}")
+    print(f"SPEARMAN ANALYSIS: {university.upper()} - {degree_name.replace('_', ' ').title()}")
+    print(f"{'='*80}")
+
+    # Get Spearman correlations
+    uni_spearman = spearman_weights[spearman_weights['university'] == university.upper()].copy()
+    significant_features = uni_spearman[uni_spearman['significant'] == True].copy()
+
+    if len(significant_features) == 0:
+        print(f"No statistically significant features for {university.upper()}")
+        print(f"  (Sample size too small: {uni_spearman.iloc[0]['n_degrees']} degrees)")
+        return None
+
+    print(f"\nUsing {len(significant_features)} validated predictors:")
+    for _, row in significant_features.iterrows():
+        feat = row['feature'].replace('avg_', '')
+        print(f"  • {feat:15s}: rho={row['spearman_rho']:+.3f}  (p={row['p_value']:.3f})")
+
+    # Load curriculum
+    if university.lower() == 'nus':
+        courses_csv = os.path.join(COURSES_DIR, "nus_courses.csv")
+        modules_parquet = os.path.join(COURSES_DIR, "10_nus_modules_embedded.parquet")
+    elif university.lower() == 'smu':
+        courses_csv = os.path.join(COURSES_DIR, "smu_courses.csv")
+        modules_parquet = os.path.join(COURSES_DIR, "10_smu_modules_embedded.parquet")
+    else:
+        courses_csv = os.path.join(COURSES_DIR, "sutd_courses.csv")
+        modules_parquet = os.path.join(COURSES_DIR, "10_sutd_modules_embedded.parquet")
+
+    courses_df = pd.read_csv(courses_csv)
+    courses_df.columns = courses_df.columns.str.strip().str.lower()
+    modules_df = pd.read_parquet(modules_parquet)
+
+    degree_modules = courses_df[courses_df["course"] == degree_name].copy()
+    degree_modules_df = modules_df[modules_df["code"].astype(str).isin(degree_modules['code'].astype(str))].copy()
+
+    if len(degree_modules_df) == 0:
+        print(f"No modules found for {degree_name}")
+        return None
+
+    # Load job matches
+    safe_course = degree_name.replace(" ", "_").replace("/", "_")
+    match_file = os.path.join(MATCHES_DIR, f"{university.lower()}_{safe_course}_matches.csv")
+
+    if not os.path.exists(match_file):
+        print(f"No job matches found")
+        return None
+
+    job_matches = pd.read_csv(match_file)
+
+    # Compute features
+    s_jobs_dict = compute_s_jobs(degree_modules_df, job_matches)
+
+    # Get Spearman weights (normalized)
+    weights_dict = {}
+    total_weight = 0
+    for _, row in significant_features.iterrows():
+        feat = row['feature'].replace('avg_', '')
+        weight = abs(row['spearman_rho'])
+        weights_dict[feat] = weight
+        total_weight += weight
+
+    for feat in weights_dict:
+        weights_dict[feat] /= total_weight
+
+    print(f"\nImportance Weights:")
+    for feat, weight in sorted(weights_dict.items(), key=lambda x: x[1], reverse=True):
+        print(f"  {feat:15s}: {weight:.3f}")
+
+    # Load prerequisite graph for NUS
+    if university.lower() == 'nus' and 's_prereqs' in weights_dict:
+        prereq_graph_path = os.path.join(BASE_DATA_PATH, "nus_prerequisite_graph.json")
+        with open(prereq_graph_path, 'r') as f:
+            unlocks_graph = json.load(f)
+    else:
+        unlocks_graph = {}
+
+    # Score each module
+    module_scores = []
+    for _, module_row in degree_modules_df.iterrows():
+        code = str(module_row['code'])
+
+        # Features
+        s_jobs_val = s_jobs_dict.get(code, 0.0)
+        s_level_val = extract_module_level(code) / 4000.0
+        num_unlocks = len(unlocks_graph.get(code, []))
+        s_prereqs_val = num_unlocks / 20.0
+
+        is_core = degree_modules[degree_modules['code'].astype(str) == code]['type'].values
+        is_core = is_core[0] == 'core' if len(is_core) > 0 else False
+
+        # Composite score (Spearman-weighted)
+        composite = 0.0
+        if 's_jobs' in weights_dict:
+            composite += weights_dict['s_jobs'] * s_jobs_val
+        if 's_level' in weights_dict:
+            composite += weights_dict['s_level'] * s_level_val
+        if 's_prereqs' in weights_dict:
+            composite += weights_dict['s_prereqs'] * s_prereqs_val
+
+        module_scores.append({
+            'code': code,
+            'title': module_row.get('title', ''),
+            'type': 'Core' if is_core else 'Elective',
+            's_jobs': s_jobs_val,
+            's_level': s_level_val,
+            's_prereqs': num_unlocks,
+            'composite_score': composite,
+            'num_jobs_matched': len(job_matches[job_matches['best_module'].str.contains(code, na=False, regex=False)])
+        })
+
+    modules_scored = pd.DataFrame(module_scores).sort_values('composite_score', ascending=False)
+
+    # Summary
+    print(f"\nCURRICULUM:")
+    print(f"  Total: {len(modules_scored)} modules")
+    print(f"  Core: {len(modules_scored[modules_scored['type'] == 'Core'])}")
+    print(f"  Jobs analyzed: {len(job_matches)}")
+
+    # Top modules
+    print(f"\nTOP 10 MODULES (Spearman-weighted):")
+    for _, row in modules_scored.head(10).iterrows():
+        level = f"L{int(row['s_level']*4)}"
+        prereq_tag = f" | {int(row['s_prereqs'])} unlocks" if row['s_prereqs'] > 0 else ""
+        print(f"  {row['code']:10s} [{level}] {row['composite_score']:.3f}  {row['type']}")
+        print(f"             Job relevance: {row['s_jobs']:.3f}{prereq_tag}")
+
+    # Weakest
+    print(f"\nBOTTOM 5 MODULES:")
+    for _, row in modules_scored.tail(5).iterrows():
+        level = f"L{int(row['s_level']*4)}"
+        print(f"  {row['code']:10s} [{level}] {row['composite_score']:.3f}")
+
+    # Recommendations
+    print(f"\nRECOMMENDATIONS:")
+    if 's_jobs' in weights_dict:
+        avg_jobs = modules_scored['s_jobs'].mean()
+        if avg_jobs < 0.25:
+            print(f"  [!] Low job relevance (avg={avg_jobs:.3f}) - update content")
+        else:
+            print(f"  [OK] Job relevance adequate (avg={avg_jobs:.3f})")
+
+    if 's_level' in weights_dict:
+        avg_level = modules_scored['s_level'].mean()
+        if avg_level < 0.6:
+            print(f"  [!] Too many low-level courses - add more 3000/4000 level")
+        else:
+            print(f"  [OK] Good level distribution (avg={avg_level:.3f})")
+
+    if 's_prereqs' in weights_dict:
+        num_prereqs = len(modules_scored[modules_scored['s_prereqs'] > 0])
+        if num_prereqs < 5:
+            print(f"  [!] Weak foundation ({num_prereqs} prereq modules)")
+        else:
+            print(f"  [OK] Strong foundation ({num_prereqs} prereq modules)")
+
+    # Visualization
+    if detailed:
+        fig, axes = plt.subplots(1, 3, figsize=(20, 6))
+
+        # Plot 1: Rankings
+        colors = ['#2ecc71' if t == 'Core' else '#e74c3c' for t in modules_scored['type']]
+        axes[0].barh(range(len(modules_scored)), modules_scored['composite_score'],
+                    color=colors, alpha=0.7, edgecolor='black', linewidth=0.5)
+        n_labels = min(15, len(modules_scored))
+        step = max(1, len(modules_scored) // n_labels)
+        axes[0].set_yticks(range(0, len(modules_scored), step))
+        axes[0].set_yticklabels([modules_scored.iloc[i]['code'] for i in range(0, len(modules_scored), step)], fontsize=8)
+        axes[0].set_xlabel('Composite Score', fontsize=11, fontweight='bold')
+        axes[0].set_title(f'{degree_name.replace("_", " ").title()}\nSpearman-Weighted Rankings', fontsize=12, fontweight='bold')
+        axes[0].axvline(modules_scored['composite_score'].median(), color='blue', linestyle='--', alpha=0.7)
+        axes[0].grid(axis='x', alpha=0.3)
+
+        # Plot 2: Level vs Jobs
+        core_mask = modules_scored['type'] == 'Core'
+        axes[1].scatter(modules_scored[core_mask]['s_jobs'], modules_scored[core_mask]['s_level'],
+                       c='#2ecc71', s=150, alpha=0.6, label='Core', edgecolors='black')
+        axes[1].scatter(modules_scored[~core_mask]['s_jobs'], modules_scored[~core_mask]['s_level'],
+                       c='#e74c3c', s=150, alpha=0.6, label='Elective', edgecolors='black')
+        axes[1].set_xlabel('Job Relevance', fontsize=11, fontweight='bold')
+        axes[1].set_ylabel('Module Level', fontsize=11, fontweight='bold')
+        axes[1].set_title('Job Relevance vs Level\n(Both predict employment!)', fontsize=12, fontweight='bold')
+        axes[1].legend()
+        axes[1].grid(alpha=0.3)
+
+        # Annotate top 5
+        for _, row in modules_scored.head(5).iterrows():
+            axes[1].annotate(row['code'], (row['s_jobs'], row['s_level']),
+                           fontsize=9, fontweight='bold', xytext=(5, 5), textcoords='offset points',
+                           bbox=dict(boxstyle='round,pad=0.3', facecolor='yellow', alpha=0.5))
+
+        # Plot 3: Feature contributions
+        feature_names = []
+        feature_contribs = []
+        for feat in ['s_jobs', 's_level', 's_prereqs']:
+            if feat in weights_dict:
+                feature_names.append(feat.replace('s_', '').title())
+                avg_val = modules_scored[feat].mean()
+                contrib = weights_dict[feat] * avg_val
+                feature_contribs.append(contrib)
+
+        bars = axes[2].bar(feature_names, feature_contribs,
+                          color=['#3498db', '#9b59b6', '#f39c12'], alpha=0.7, edgecolor='black')
+        axes[2].set_ylabel('Avg Contribution', fontsize=11, fontweight='bold')
+        axes[2].set_title('Feature Contributions\n(Weighted by Spearman rho)', fontsize=12, fontweight='bold')
+        axes[2].grid(axis='y', alpha=0.3)
+
+        for bar in bars:
+            height = bar.get_height()
+            axes[2].text(bar.get_x() + bar.get_width()/2., height,
+                        f'{height:.3f}', ha='center', va='bottom', fontsize=10, fontweight='bold')
+
+        plt.tight_layout()
+        output_file = os.path.join(VIZ_DIR, f"spearman_{university.lower()}_{safe_course}.png")
+        plt.savefig(output_file, dpi=300, bbox_inches='tight')
+        print(f"\nSaved: {os.path.basename(output_file)}")
+        plt.show()
+
+        # Save CSV
+        csv_output = os.path.join(VIZ_DIR, f"module_scores_spearman_{university.lower()}_{safe_course}.csv")
+        modules_scored.to_csv(csv_output, index=False)
+        print(f"Saved: {os.path.basename(csv_output)}")
+
+    return modules_scored
+
+print("Analysis function loaded")
