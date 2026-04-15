@@ -1,7 +1,7 @@
 ## Setup
 
 ```bash
-git clone <repo-url>
+git clone <https://github.com/annikaljy/dsa4264/>
 cd dsa4264
 python3 -m venv venv
 source venv/bin/activate
