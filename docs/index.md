@@ -83,7 +83,7 @@ representation_model = [KeyBERTInspired(), MaximalMarginalRelevance(diversity=0.
 
 **Figure 2** validates the semantic coherence of individual topics. Each topic exhibits clearly distinct, high scoring keywords. These topics are then used as the job market benchmark for evaluating university modules.
 
-<div align="center">
+<div align="center" markdown="1">
 
 ![](images/image14.png)
 
@@ -91,7 +91,7 @@ representation_model = [KeyBERTInspired(), MaximalMarginalRelevance(diversity=0.
 
 </div>
 
-<div align="center">
+<div align="center" markdown="1">
 
 ![](images/image15.png)
 
@@ -126,7 +126,7 @@ Coverage was then analysed at three levels:
 2. Job-level deduplicated coverage distribution
 3. Demand-supply gaps for highly demanded skills
 
-<div align="center">
+<div align="center" markdown="1">
 
 ![](images/image16.png)
 
@@ -140,7 +140,7 @@ Coverage was then analysed at three levels:
 
 Job-level coverage was then computed as the proportion of a posting's unique demanded skills that were covered. 
 
-<div align="center">
+<div align="center" markdown="1">
 
 ![](images/image4.png)
 
@@ -154,7 +154,7 @@ Across all three universities, the mean and median job-level coverage are both *
 
 For each demanded skill, the **skill gap** was defined as the difference between job demand and university supply. 
 
-<div align="center">
+<div align="center" markdown="1">
 
 ![](images/image9.png)
 
@@ -166,7 +166,7 @@ University skill supply is generally well below job market demand, with most poi
 
 We then focused on the twelve most in-demand skills, expressing university skill supply as a percentage of job market demand. 
 
-<div align="center">
+<div align="center" markdown="1">
 
 ![](images/image2.png)
 
@@ -195,7 +195,7 @@ While the macro-level analysis provides a broad view of curriculum skill coverag
 
 **Figure 7** shows that foundational modules are left-skewed in the distribution, below the median of 0.32. In contrast, higher level modules are more sparse, with many scoring above 0.6. This pattern holds across all 10 degrees, suggesting that foundational modules undervaluation is a structural phenomenon rather than a degree-specific anomaly.
 
-<div align="center">
+<div align="center" markdown="1">
 
 ![](images/image6.png)
 
@@ -211,7 +211,7 @@ $$
 
 **Figure 8** plots each module along both dimensions for all 10 degrees. Across degrees, foundational modules like MNO1706 and MKT1705 in Accountancy and Real Estate, and EE2211 and MA1513 in Civil Engineering, consistently occupy the top left quadrant. Together, they suggest that a two-dimensional framework combining direct job relevance with prerequisite breadth is necessary for a complete picture. How these foundational modules are formally incorporated into our relevance scoring is addressed in the following micro-level analysis.
 
-<div align="center">
+<div align="center" markdown="1">
 
 ![](images/image8.png)
 
@@ -309,7 +309,7 @@ $$
 
 **0.250** was selected as the largest admissible threshold that satisfies all null, stability and retention constraints, making it conservative, stable and defensible for public-sector comparison. 
 
-<div align="center">
+<div align="center" markdown="1">
 
 ![](images/image13.png)
 
@@ -317,7 +317,7 @@ $$
 
 </div>
 
-<div align="center">
+<div align="center" markdown="1">
 
 ![](images/image5.png)
 
@@ -327,7 +327,7 @@ $$
 
 #### Results
 
-<div align="center">
+<div align="center" markdown="1">
 
 ![](images/image12.png)
 
@@ -338,7 +338,7 @@ $$
 - NUS Industrial Design and the Accountancy programmes are the strongest broad-market performers, with reach above 21% and mean similarity around 0.21.
 - SMU Economics (0.43%, 0.123) and NUS Data Science Analytics (1.38%, 0.133) are the weakest. 
 
-<div align="center">
+<div align="center" markdown="1">
 
 ![](images/image11.png)
 
@@ -349,7 +349,7 @@ $$
 - SMU Business is the broadest degree, followed by NUS Industrial Design and the two Accountancy programmes.
 - SUTD Architecture is relatively broad, but more concentrated in construction- and engineering-related families.
 
-<div align="center">
+<div align="center" markdown="1">
 
 ![](images/image10.png)
 
@@ -366,7 +366,7 @@ These collective scores were pooled across all 21 degrees to derive preparation 
 
 Across the 21 degrees, substantial variation in targeted market fit was observed:
 
-<div align="center">
+<div align="center" markdown="1">
 
 ![](images/image7.png)
 
@@ -380,7 +380,7 @@ Across the 21 degrees, substantial variation in targeted market fit was observed
 
 By field, Business degrees (mean: 59.2% well-prepared) significantly outperform Computing (37.6%) and Data Science (7.6%). This is concerning for Singapore's digital economy goals. 
 
-<div align="center">
+<div align="center" markdown="1">
 
 ![](images/image1.png)
 
@@ -390,7 +390,7 @@ By field, Business degrees (mean: 59.2% well-prepared) significantly outperform 
 
 Market size showed only a weak positive correlation with preparation quality ($\rho = 0.089$), suggesting that job availability alone does not strongly predict degree readiness.
 
-<div align="center">
+<div align="center" markdown="1">
 
 ![](images/image3.png)
 
