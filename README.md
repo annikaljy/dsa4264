@@ -1,3 +1,7 @@
+## Technical Report
+
+View at: [Report](https://annikaljy.github.io/dsa4264/)
+
 ## Setup
 
 ```bash
@@ -37,6 +41,3 @@ docker compose down
 ```
 Add -d to either command to run in the background.
 
-## Technical Report
-
-View at: [Report](https://annikaljy.github.io/dsa4264/)
