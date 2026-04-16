@@ -83,18 +83,19 @@ representation_model = [KeyBERTInspired(), MaximalMarginalRelevance(diversity=0.
 
 **Figure 2** validates the semantic coherence of individual topics. Each topic exhibits clearly distinct, high scoring keywords. These topics are then used as the job market benchmark for evaluating university modules.
 
+<div align="center" markdown="1"> 
 
-<p align="center">
-  <img src="images/image14.png" width="60%">
-</p>
+![](images/image14.png) 
 
-<p align="center"><b>Fig 1. Topic Word Scores</b></p>
+**Fig 1. Topic Word Scores**
 
-<p align="center">
-  <img src="images/image15.png" width="60%">
-</p>
+</div>
 
-<p align="center"><b>Fig 2. Intertopic Distance Map</b></p>
+<div align="center" markdown="1">
+
+![](images/image15.png)
+
+**Fig 2. Intertopic Distance Map**
 
 </div>
 
