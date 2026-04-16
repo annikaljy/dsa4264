@@ -1,13 +1,33 @@
-data
-.DS_Store
+# Data files
+data/
+DSA4264 Data/
+*.parquet
+*.csv
+
+# Build outputs
+site/
+outputs/
+
+# Model files
+notebooks/bertopic_global_model/
+notebooks/bertopic_visualizations_global/
+
+# Python
 .venv/
 venv/
 __pycache__/
-*.parquet
-*.csv
-outputs/
+*.pyc
+
+# System files
+.DS_Store
+.qodo/
+
+# Ignore all .py files except in specific folders
 *.py
-!notebooks/
+!app/**/*.py
+!notebooks/**/*.py
+
+# Ignore all .md files except specific ones
 *.md
 !README.md
-.qodo/
+!docs/**/*.md
